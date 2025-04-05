@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Module } from '@/components/modules/ModuleCard';
 import { ProgressProvider } from '@/components/progress/ProgressProvider';

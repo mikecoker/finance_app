@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CharacterContainer, CharacterType, EmotionType } from './CharacterContainer';

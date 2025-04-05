@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { CharacterContainer } from './CharacterContainer';
 import { CharacterDialog } from './CharacterDialog';
