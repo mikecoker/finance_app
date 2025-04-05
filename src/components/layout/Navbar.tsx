@@ -1,8 +1,17 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useClerk } from '@clerk/nextjs';
 
 export default function Navbar() {
+  const { openSignIn } = useClerk();
+
+  const handleSignIn = () => {
+    openSignIn();
+  };
+
   return (
     <nav className="bg-white shadow-sm">
       <div className="max-w-6xl mx-auto px-4">
@@ -24,7 +33,10 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+            <button 
+              onClick={handleSignIn}
+              className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+            >
               Sign In
             </button>
           </div>
