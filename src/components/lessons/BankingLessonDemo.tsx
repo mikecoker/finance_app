@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   CharacterContainer, 
   CharacterDialog, 
@@ -101,19 +101,53 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
   const [showFeedback, setShowFeedback] = useState(false);
   const [showReaction, setShowReaction] = useState(false);
   const [reactionEmotion, setReactionEmotion] = useState<'happy' | 'sad'>('happy');
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  
+  // Add a key to force re-render of components
+  const [renderKey, setRenderKey] = useState(0);
   
   const lesson = bankingFundamentalsLesson;
   const step = lesson[currentStep];
   
+  // Reference to track if component is mounted
+  const isMounted = useRef(true);
+  
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+  
   const handleNextStep = () => {
+    // Prevent multiple rapid clicks
+    if (isTransitioning) return;
+    
     if (currentStep < lesson.length - 1) {
-      setCurrentStep(currentStep + 1);
-      setSelectedOption(null);
-      setShowFeedback(false);
+      setIsTransitioning(true);
+      
+      // First hide current content with longer delay to ensure proper transition
+      setTimeout(() => {
+        if (!isMounted.current) return;
+        
+        // Update step and increment render key to force re-render
+        setCurrentStep(prevStep => prevStep + 1);
+        setRenderKey(prev => prev + 1);
+        setSelectedOption(null);
+        setShowFeedback(false);
+        
+        // Longer delay before allowing next transition to ensure content is fully rendered
+        setTimeout(() => {
+          if (!isMounted.current) return;
+          setIsTransitioning(false);
+        }, 300); // Increased from 50ms to 300ms
+      }, 300); // Increased from 100ms to 300ms
     }
   };
   
   const handleOptionSelect = (index: number) => {
+    if (isTransitioning) return;
+    
     setSelectedOption(index);
     setShowFeedback(true);
     
@@ -126,8 +160,9 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
     
     setShowReaction(true);
     setTimeout(() => {
+      if (!isMounted.current) return;
       setShowReaction(false);
-    }, 2000);
+    }, 1000);
   };
 
   const handleBackToModules = () => {
@@ -141,21 +176,21 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
     }
   };
   
-  // Animation variants
+  // Animation variants - REDUCED durations
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
       transition: { 
-        duration: 0.5,
+        duration: 0.25,
         when: "beforeChildren",
-        staggerChildren: 0.2
+        staggerChildren: 0.1
       }
     },
     exit: { 
       opacity: 0,
       transition: { 
-        duration: 0.3
+        duration: 0.15
       }
     }
   };
@@ -166,17 +201,21 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
       opacity: 1, 
       y: 0,
       transition: { 
-        duration: 0.3
+        duration: 0.15
       }
     }
   };
   
   // Render different components based on step type
   const renderStepContent = () => {
+    // Use key with renderKey to force re-render
+    const contentKey = `step-${currentStep}-${renderKey}`;
+    
     switch (step.type) {
       case 'intro':
         return (
           <CharacterGuide
+            key={contentKey}
             character={step.character}
             emotion="excited"
             title={step.title}
@@ -187,7 +226,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
         
       case 'content':
         return (
-          <div className="mb-6">
+          <div className="mb-6" key={contentKey}>
             <CharacterDialog
               character={step.character}
               message={step.content}
@@ -199,6 +238,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              disabled={isTransitioning}
             >
               Continue
             </motion.button>
@@ -207,7 +247,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
         
       case 'quiz':
         return (
-          <div className="mb-6">
+          <div className="mb-6" key={contentKey}>
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
               <p className="mb-4">{step.content}</p>
@@ -219,7 +259,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
             >
               {step.options?.map((option, index) => (
                 <motion.button
-                  key={index}
+                  key={`${contentKey}-option-${index}`}
                   className={`w-full p-3 text-left rounded-md border ${
                     selectedOption === index 
                       ? option.correct 
@@ -228,7 +268,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                       : 'bg-white border-gray-300 hover:bg-gray-50'
                   }`}
                   onClick={() => handleOptionSelect(index)}
-                  disabled={showFeedback}
+                  disabled={showFeedback || isTransitioning}
                   whileHover={!showFeedback ? { scale: 1.02 } : {}}
                   whileTap={!showFeedback ? { scale: 0.98 } : {}}
                 >
@@ -245,7 +285,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                     : 'bg-red-50 border border-red-200'
                 }`}
                 initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0, transition: { duration: 0.15 } }}
               >
                 <p>{step.options?.[selectedOption].feedback}</p>
               </motion.div>
@@ -256,9 +296,10 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                 className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
                 onClick={handleNextStep}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                animate={{ opacity: 1, transition: { duration: 0.15 } }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                disabled={isTransitioning}
               >
                 Continue
               </motion.button>
@@ -269,7 +310,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
       case 'interactive':
         // In a real implementation, this would be a more complex interactive component
         return (
-          <div className="mb-6">
+          <div className="mb-6" key={contentKey}>
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
               <p className="mb-4">{step.content}</p>
@@ -319,6 +360,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              disabled={isTransitioning}
             >
               Continue
             </motion.button>
@@ -327,7 +369,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
         
       case 'application':
         return (
-          <div className="mb-6">
+          <div className="mb-6" key={contentKey}>
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
               <p className="mb-4">{step.content}</p>
@@ -356,6 +398,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              disabled={isTransitioning}
             >
               Continue
             </motion.button>
@@ -364,7 +407,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
         
       case 'complete':
         return (
-          <div className="mb-6">
+          <div className="mb-6" key={contentKey}>
             <motion.div 
               className="text-center mb-6"
               variants={itemVariants}
@@ -392,6 +435,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                disabled={isTransitioning}
               >
                 Back to Module
               </motion.button>
@@ -405,6 +449,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                disabled={isTransitioning}
               >
                 Next Lesson
               </motion.button>
@@ -447,8 +492,18 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
         />
       )}
       
-      {/* Main content */}
-      {renderStepContent()}
+      {/* Main content with AnimatePresence for proper transitions */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`step-container-${currentStep}-${renderKey}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.15 }}
+        >
+          {renderStepContent()}
+        </motion.div>
+      </AnimatePresence>
     </motion.div>
   );
 };

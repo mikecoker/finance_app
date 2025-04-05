@@ -31,8 +31,8 @@ export const CharacterDialog: React.FC<CharacterDialogProps> = ({
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   
-  // Text animation speed (characters per second)
-  const textSpeed = 20;
+  // Text animation speed (characters per second) - INCREASED from 20 to 50
+  const textSpeed = 50;
   
   // Auto-close effect
   React.useEffect(() => {
@@ -60,7 +60,7 @@ export const CharacterDialog: React.FC<CharacterDialogProps> = ({
     }
   }, [currentTextIndex, message]);
   
-  // Dialog bubble variants
+  // Dialog bubble variants - REDUCED animation durations
   const bubbleVariants = {
     hidden: { 
       opacity: 0, 
@@ -72,7 +72,7 @@ export const CharacterDialog: React.FC<CharacterDialogProps> = ({
       y: 0,
       scale: 1,
       transition: { 
-        duration: 0.3,
+        duration: 0.15, // REDUCED from 0.3
         ease: "easeOut"
       }
     },
@@ -81,7 +81,7 @@ export const CharacterDialog: React.FC<CharacterDialogProps> = ({
       y: 20,
       scale: 0.8,
       transition: { 
-        duration: 0.2,
+        duration: 0.1, // REDUCED from 0.2
         ease: "easeIn"
       }
     }

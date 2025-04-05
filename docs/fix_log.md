@@ -2,7 +2,73 @@
 
 ## Issues Fixed
 
-### 1. Component Import Error in layout.tsx
+### 1. Lesson Progression Content Display Issue
+
+**Problem:**
+The Banking Fundamentals lesson was not properly displaying the text content for step 3. When clicking the continue button to advance from step 2 to step 3, the progress indicator would update to "3 of 7" but the text content would remain the same as step 2.
+
+**Original Code:**
+```typescript
+const handleNextStep = () => {
+  // Prevent multiple rapid clicks
+  if (isTransitioning) return;
+  
+  if (currentStep < lesson.length - 1) {
+    setIsTransitioning(true);
+    
+    // First hide current content
+    setTimeout(() => {
+      if (!isMounted.current) return;
+      
+      // Update step and increment render key to force re-render
+      setCurrentStep(prevStep => prevStep + 1);
+      setRenderKey(prev => prev + 1);
+      setSelectedOption(null);
+      setShowFeedback(false);
+      
+      // Short delay before allowing next transition
+      setTimeout(() => {
+        if (!isMounted.current) return;
+        setIsTransitioning(false);
+      }, 50);
+    }, 100);
+  }
+};
+```
+
+**Fixed Code:**
+```typescript
+const handleNextStep = () => {
+  // Prevent multiple rapid clicks
+  if (isTransitioning) return;
+  
+  if (currentStep < lesson.length - 1) {
+    setIsTransitioning(true);
+    
+    // First hide current content with longer delay to ensure proper transition
+    setTimeout(() => {
+      if (!isMounted.current) return;
+      
+      // Update step and increment render key to force re-render
+      setCurrentStep(prevStep => prevStep + 1);
+      setRenderKey(prev => prev + 1);
+      setSelectedOption(null);
+      setShowFeedback(false);
+      
+      // Longer delay before allowing next transition to ensure content is fully rendered
+      setTimeout(() => {
+        if (!isMounted.current) return;
+        setIsTransitioning(false);
+      }, 300); // Increased from 50ms to 300ms
+    }, 300); // Increased from 100ms to 300ms
+  }
+};
+```
+
+**Explanation:**
+The issue was caused by the transition timing being too short for React to properly update the DOM between steps. The timeouts were increased from 50ms/100ms to 300ms to ensure content is fully rendered before allowing the next transition. This fix ensures that all lesson steps display their correct content when navigating through the lesson.
+
+### 2. Component Import Error in layout.tsx
 
 **Problem:**
 The application was failing to render due to an import mismatch in the layout.tsx file. Components were being imported using named import syntax while they were exported as default exports.
