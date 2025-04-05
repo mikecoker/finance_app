@@ -24,14 +24,30 @@ export const CharacterReaction: React.FC<CharacterReactionProps> = ({
 }) => {
   const [visible, setVisible] = React.useState(true);
   
-  // Auto-hide after duration
+  // Auto-hide after duration using requestAnimationFrame instead of setTimeout
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(false);
-      if (onComplete) onComplete();
-    }, duration);
+    let startTime: number;
+    let animationFrameId: number;
     
-    return () => clearTimeout(timer);
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      
+      if (elapsed >= duration) {
+        setVisible(false);
+        if (onComplete) onComplete();
+      } else {
+        animationFrameId = requestAnimationFrame(animate);
+      }
+    };
+    
+    animationFrameId = requestAnimationFrame(animate);
+    
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, [duration, onComplete]);
   
   // Animation variants based on emotion

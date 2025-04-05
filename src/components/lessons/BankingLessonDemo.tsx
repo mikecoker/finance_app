@@ -96,73 +96,42 @@ interface BankingLessonDemoProps {
 }
 
 export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToModule }) => {
+  // Simple state management without complex transitions
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [showReaction, setShowReaction] = useState(false);
   const [reactionEmotion, setReactionEmotion] = useState<'happy' | 'sad'>('happy');
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  
-  // Add a key to force re-render of components
-  const [renderKey, setRenderKey] = useState(0);
   
   const lesson = bankingFundamentalsLesson;
   const step = lesson[currentStep];
   
-  // Reference to track if component is mounted
-  const isMounted = useRef(true);
-  
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      isMounted.current = false;
-    };
-  }, []);
-  
+  // Simple event-based handlers without timeouts
   const handleNextStep = () => {
-    // Prevent multiple rapid clicks
-    if (isTransitioning) return;
-    
     if (currentStep < lesson.length - 1) {
-      setIsTransitioning(true);
-      
-      // First hide current content with longer delay to ensure proper transition
-      setTimeout(() => {
-        if (!isMounted.current) return;
-        
-        // Update step and increment render key to force re-render
-        setCurrentStep(prevStep => prevStep + 1);
-        setRenderKey(prev => prev + 1);
-        setSelectedOption(null);
-        setShowFeedback(false);
-        
-        // Longer delay before allowing next transition to ensure content is fully rendered
-        setTimeout(() => {
-          if (!isMounted.current) return;
-          setIsTransitioning(false);
-        }, 300); // Increased from 50ms to 300ms
-      }, 300); // Increased from 100ms to 300ms
+      setCurrentStep(currentStep + 1);
+      setSelectedOption(null);
+      setShowFeedback(false);
     }
   };
   
   const handleOptionSelect = (index: number) => {
-    if (isTransitioning) return;
-    
     setSelectedOption(index);
     setShowFeedback(true);
     
     // Show appropriate reaction based on correctness
-    if (step.options && step.options[index].correct) {
-      setReactionEmotion('happy');
-    } else {
-      setReactionEmotion('sad');
-    }
-    
+    const isCorrect = step.options && step.options[index].correct;
+    setReactionEmotion(isCorrect ? 'happy' : 'sad');
     setShowReaction(true);
-    setTimeout(() => {
-      if (!isMounted.current) return;
-      setShowReaction(false);
-    }, 1000);
+    
+    // Use requestAnimationFrame instead of setTimeout for animation
+    requestAnimationFrame(() => {
+      // This will run in the next animation frame, giving time for the reaction to show
+      requestAnimationFrame(() => {
+        // And this will run in the frame after that, giving enough time for the animation
+        setShowReaction(false);
+      });
+    });
   };
 
   const handleBackToModules = () => {
@@ -170,52 +139,23 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
       onBackToModule();
     } else {
       // Fallback if no handler is provided
-      console.log('Back to modules clicked, but no handler provided');
-      // Could redirect to course page as fallback
       window.location.href = '/course';
     }
   };
   
-  // Animation variants - REDUCED durations
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { 
-        duration: 0.25,
-        when: "beforeChildren",
-        staggerChildren: 0.1
-      }
-    },
-    exit: { 
-      opacity: 0,
-      transition: { 
-        duration: 0.15
-      }
-    }
-  };
-  
+  // Simplified animation variants
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { 
-        duration: 0.15
-      }
-    }
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
   };
   
   // Render different components based on step type
   const renderStepContent = () => {
-    // Use key with renderKey to force re-render
-    const contentKey = `step-${currentStep}-${renderKey}`;
-    
     switch (step.type) {
       case 'intro':
         return (
           <CharacterGuide
-            key={contentKey}
+            key={`intro-${currentStep}`}
             character={step.character}
             emotion="excited"
             title={step.title}
@@ -226,40 +166,33 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
         
       case 'content':
         return (
-          <div className="mb-6" key={contentKey}>
+          <div className="mb-6" key={`content-${currentStep}`}>
             <CharacterDialog
               character={step.character}
               message={step.content}
               autoClose={false}
             />
-            <motion.button
+            <button
               className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
               onClick={handleNextStep}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              disabled={isTransitioning}
             >
               Continue
-            </motion.button>
+            </button>
           </div>
         );
         
       case 'quiz':
         return (
-          <div className="mb-6" key={contentKey}>
-            <motion.div variants={itemVariants}>
+          <div className="mb-6" key={`quiz-${currentStep}`}>
+            <div>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
               <p className="mb-4">{step.content}</p>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="space-y-3 mb-6"
-              variants={itemVariants}
-            >
+            <div className="space-y-3 mb-6">
               {step.options?.map((option, index) => (
-                <motion.button
-                  key={`${contentKey}-option-${index}`}
+                <button
+                  key={`option-${index}`}
                   className={`w-full p-3 text-left rounded-md border ${
                     selectedOption === index 
                       ? option.correct 
@@ -268,58 +201,45 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                       : 'bg-white border-gray-300 hover:bg-gray-50'
                   }`}
                   onClick={() => handleOptionSelect(index)}
-                  disabled={showFeedback || isTransitioning}
-                  whileHover={!showFeedback ? { scale: 1.02 } : {}}
-                  whileTap={!showFeedback ? { scale: 0.98 } : {}}
+                  disabled={showFeedback}
                 >
                   {option.text}
-                </motion.button>
+                </button>
               ))}
-            </motion.div>
+            </div>
             
             {showFeedback && selectedOption !== null && (
-              <motion.div
+              <div
                 className={`p-4 rounded-md mb-4 ${
                   step.options?.[selectedOption].correct
                     ? 'bg-green-50 border border-green-200'
                     : 'bg-red-50 border border-red-200'
                 }`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0, transition: { duration: 0.15 } }}
               >
                 <p>{step.options?.[selectedOption].feedback}</p>
-              </motion.div>
+              </div>
             )}
             
             {showFeedback && (
-              <motion.button
+              <button
                 className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
                 onClick={handleNextStep}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { duration: 0.15 } }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                disabled={isTransitioning}
               >
                 Continue
-              </motion.button>
+              </button>
             )}
           </div>
         );
         
       case 'interactive':
-        // In a real implementation, this would be a more complex interactive component
         return (
-          <div className="mb-6" key={contentKey}>
-            <motion.div variants={itemVariants}>
+          <div className="mb-6" key={`interactive-${currentStep}`}>
+            <div>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
               <p className="mb-4">{step.content}</p>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="border border-gray-300 rounded-lg p-6 bg-gray-50 mb-6"
-              variants={itemVariants}
-            >
+            <div className="border border-gray-300 rounded-lg p-6 bg-gray-50 mb-6">
               <div className="flex flex-col md:flex-row items-center justify-around gap-4 mb-4">
                 <div className="text-center">
                   <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -352,33 +272,26 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                   <li>• The bank makes $26 profit ($36 - $10)</li>
                 </ul>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.button
+            <button
               className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
               onClick={handleNextStep}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              disabled={isTransitioning}
             >
               Continue
-            </motion.button>
+            </button>
           </div>
         );
         
       case 'application':
         return (
-          <div className="mb-6" key={contentKey}>
-            <motion.div variants={itemVariants}>
+          <div className="mb-6" key={`application-${currentStep}`}>
+            <div>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
               <p className="mb-4">{step.content}</p>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="border border-gray-300 rounded-lg p-6 bg-gray-50 mb-6"
-              variants={itemVariants}
-            >
+            <div className="border border-gray-300 rounded-lg p-6 bg-gray-50 mb-6">
               <h4 className="font-semibold mb-3">Consider these questions:</h4>
               <ul className="space-y-2 mb-4">
                 <li>1. Do you need frequent access to your money?</li>
@@ -390,28 +303,21 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
               <p className="text-sm text-gray-600 italic">
                 Think about these questions as you consider your banking needs. In future lessons, we'll explore different account types in detail.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.button
+            <button
               className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
               onClick={handleNextStep}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              disabled={isTransitioning}
             >
               Continue
-            </motion.button>
+            </button>
           </div>
         );
         
       case 'complete':
         return (
-          <div className="mb-6" key={contentKey}>
-            <motion.div 
-              className="text-center mb-6"
-              variants={itemVariants}
-            >
+          <div className="mb-6" key={`complete-${currentStep}`}>
+            <div className="text-center mb-6">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">✅</span>
               </div>
@@ -426,33 +332,25 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
                 </div>
                 <p className="text-sm mt-1">20% of module complete</p>
               </div>
-            </motion.div>
+            </div>
             
             <div className="flex justify-center gap-4">
-              <motion.button
+              <button
                 className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600"
                 onClick={handleBackToModules}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                disabled={isTransitioning}
               >
                 Back to Module
-              </motion.button>
+              </button>
               
-              <motion.button
+              <button
                 className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
                 onClick={() => {
                   // In a real app, this would navigate to the next lesson
                   handleBackToModules();
                 }}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                disabled={isTransitioning}
               >
                 Next Lesson
-              </motion.button>
+              </button>
             </div>
           </div>
         );
@@ -463,13 +361,7 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
   };
   
   return (
-    <motion.div 
-      className="max-w-3xl mx-auto p-4 md:p-6"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <div className="max-w-3xl mx-auto p-4 md:p-6">
       {/* Progress bar */}
       <div className="mb-6">
         <div className="flex justify-between text-sm mb-1">
@@ -492,19 +384,9 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
         />
       )}
       
-      {/* Main content with AnimatePresence for proper transitions */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`step-container-${currentStep}-${renderKey}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.15 }}
-        >
-          {renderStepContent()}
-        </motion.div>
-      </AnimatePresence>
-    </motion.div>
+      {/* Main content */}
+      {renderStepContent()}
+    </div>
   );
 };
 

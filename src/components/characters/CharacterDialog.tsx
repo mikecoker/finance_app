@@ -49,12 +49,13 @@ export const CharacterDialog: React.FC<CharacterDialogProps> = ({
   // Text typing animation effect
   React.useEffect(() => {
     if (currentTextIndex < message.length) {
-      const timer = setTimeout(() => {
+      // Use requestAnimationFrame instead of setTimeout for smoother animation
+      const animationFrame = requestAnimationFrame(() => {
         setDisplayedText(message.substring(0, currentTextIndex + 1));
         setCurrentTextIndex(currentTextIndex + 1);
-      }, 1000 / textSpeed);
+      });
       
-      return () => clearTimeout(timer);
+      return () => cancelAnimationFrame(animationFrame);
     } else {
       setSpeaking(false);
     }

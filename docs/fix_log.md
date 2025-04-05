@@ -5,9 +5,11 @@
 ### 1. Lesson Progression Content Display Issue
 
 **Problem:**
-The Banking Fundamentals lesson was not properly displaying the text content for step 3. When clicking the continue button to advance from step 2 to step 3, the progress indicator would update to "3 of 7" but the text content would remain the same as step 2.
+The Banking Fundamentals lesson was not properly displaying the text content for step 3. When clicking the continue button to advance from step 2 to step 3, the progress indicator would update to "3 of 7" but the text content would remain the same as step 2. Additionally, the quiz in step 4 was not displaying properly.
 
-**Original Code:**
+**Original Approach (Failed):**
+Initially, we tried adjusting the timeout durations in the transition logic:
+
 ```typescript
 const handleNextStep = () => {
   // Prevent multiple rapid clicks
@@ -36,37 +38,43 @@ const handleNextStep = () => {
 };
 ```
 
-**Fixed Code:**
+This approach led to a cycle of fixing one issue while breaking another, as the timing-based approach was inherently unreliable.
+
+**Final Solution:**
+Completely rewrote the component with an event-based approach instead of using timers:
+
 ```typescript
+// Simple event-based handlers without timeouts
 const handleNextStep = () => {
-  // Prevent multiple rapid clicks
-  if (isTransitioning) return;
-  
   if (currentStep < lesson.length - 1) {
-    setIsTransitioning(true);
-    
-    // First hide current content with longer delay to ensure proper transition
-    setTimeout(() => {
-      if (!isMounted.current) return;
-      
-      // Update step and increment render key to force re-render
-      setCurrentStep(prevStep => prevStep + 1);
-      setRenderKey(prev => prev + 1);
-      setSelectedOption(null);
-      setShowFeedback(false);
-      
-      // Longer delay before allowing next transition to ensure content is fully rendered
-      setTimeout(() => {
-        if (!isMounted.current) return;
-        setIsTransitioning(false);
-      }, 300); // Increased from 50ms to 300ms
-    }, 300); // Increased from 100ms to 300ms
+    setCurrentStep(currentStep + 1);
+    setSelectedOption(null);
+    setShowFeedback(false);
   }
+};
+
+const handleOptionSelect = (index: number) => {
+  setSelectedOption(index);
+  setShowFeedback(true);
+  
+  // Show appropriate reaction based on correctness
+  const isCorrect = step.options && step.options[index].correct;
+  setReactionEmotion(isCorrect ? 'happy' : 'sad');
+  setShowReaction(true);
+  
+  // Use requestAnimationFrame instead of setTimeout for animation
+  requestAnimationFrame(() => {
+    // This will run in the next animation frame, giving time for the reaction to show
+    requestAnimationFrame(() => {
+      // And this will run in the frame after that, giving enough time for the animation
+      setShowReaction(false);
+    });
+  });
 };
 ```
 
 **Explanation:**
-The issue was caused by the transition timing being too short for React to properly update the DOM between steps. The timeouts were increased from 50ms/100ms to 300ms to ensure content is fully rendered before allowing the next transition. This fix ensures that all lesson steps display their correct content when navigating through the lesson.
+The issue was caused by using timeouts for state transitions, which created unpredictable behavior across different environments and devices. By switching to an event-based approach with direct state updates and using requestAnimationFrame for animations instead of setTimeout, we created a more reliable solution that doesn't depend on arbitrary timing values. This approach ensures that all lesson steps display their correct content when navigating through the lesson.
 
 ### 2. Component Import Error in layout.tsx
 
