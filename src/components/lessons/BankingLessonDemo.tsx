@@ -93,9 +93,10 @@ const bankingFundamentalsLesson: LessonStep[] = [
 
 interface BankingLessonDemoProps {
   onBackToModule?: () => void;
+  onNextLesson?: () => void;
 }
 
-export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToModule }) => {
+export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToModule, onNextLesson }) => {
   // Simple state management without complex transitions
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -345,8 +346,13 @@ export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToMo
               <button
                 className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
                 onClick={() => {
-                  // In a real app, this would navigate to the next lesson
-                  handleBackToModules();
+                  // Navigate to the next lesson if handler is provided
+                  if (onNextLesson) {
+                    onNextLesson();
+                  } else {
+                    // Fallback to module view if no handler
+                    handleBackToModules();
+                  }
                 }}
               >
                 Next Lesson

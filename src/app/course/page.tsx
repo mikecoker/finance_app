@@ -8,6 +8,7 @@ import { ProgressDashboard } from '@/components/progress/ProgressDashboard';
 import { ModuleGrid } from '@/components/modules/ModuleGrid';
 import { ModuleDetail } from '@/components/modules/ModuleDetail';
 import { BankingLessonDemo } from '@/components/lessons/BankingLessonDemo';
+import { CharacterDialog } from '@/components/characters/CharacterDialog';
 
 // Sample data for demonstration
 const sampleModules: Module[] = [
@@ -144,6 +145,29 @@ export default function CourseApp() {
   const [view, setView] = React.useState<'modules' | 'module-detail' | 'lesson'>('modules');
   const [selectedModule, setSelectedModule] = React.useState<string | null>(null);
   const [selectedLesson, setSelectedLesson] = React.useState<string | null>(null);
+  const [lessons, setLessons] = React.useState(sampleLessons);
+  
+  // Load saved progress from localStorage on component mount
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedProgress = localStorage.getItem('lessonProgress');
+      if (savedProgress) {
+        try {
+          const parsedProgress = JSON.parse(savedProgress);
+          setLessons(parsedProgress);
+        } catch (e) {
+          console.error('Error parsing saved progress:', e);
+        }
+      }
+    }
+  }, []);
+  
+  // Save progress to localStorage whenever lessons state changes
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('lessonProgress', JSON.stringify(lessons));
+    }
+  }, [lessons]);
   
   const handleModuleSelect = (moduleId: string) => {
     setSelectedModule(moduleId);
@@ -154,6 +178,42 @@ export default function CourseApp() {
     setSelectedModule(moduleId);
     setSelectedLesson(lessonId);
     setView('lesson');
+  };
+  
+  const handleNextLesson = () => {
+    if (selectedModule && selectedLesson) {
+      // Find current lesson index
+      const currentLessonIndex = lessons.findIndex(l => l.id === selectedLesson);
+      
+      // If there's a next lesson in this module
+      if (currentLessonIndex < lessons.length - 1) {
+        const nextLesson = lessons[currentLessonIndex + 1];
+        setSelectedLesson(nextLesson.id);
+        
+        // Update lesson status and persist it
+        const updatedLessons = [...lessons];
+        // Mark current lesson as completed
+        if (currentLessonIndex >= 0) {
+          updatedLessons[currentLessonIndex] = {
+            ...updatedLessons[currentLessonIndex],
+            completed: true,
+            current: false
+          };
+        }
+        // Mark next lesson as current
+        updatedLessons[currentLessonIndex + 1] = {
+          ...updatedLessons[currentLessonIndex + 1],
+          current: true,
+          locked: false
+        };
+        
+        // Update lessons state to trigger localStorage save
+        setLessons(updatedLessons);
+      } else {
+        // If this was the last lesson, go back to module view
+        handleBackToModule();
+      }
+    }
   };
   
   const handleBackToModules = () => {
@@ -193,7 +253,7 @@ export default function CourseApp() {
               {view === 'module-detail' && selectedModule && (
                 <ModuleDetail
                   module={sampleModules.find(m => m.id === selectedModule)!}
-                  lessons={sampleLessons.filter(l => l.moduleId === selectedModule)}
+                  lessons={lessons.filter(l => l.moduleId === selectedModule)}
                   onLessonSelect={handleLessonSelect}
                   onBackClick={handleBackToModules}
                 />
@@ -211,7 +271,113 @@ export default function CourseApp() {
                     Back to Module
                   </button>
                   
-                  <BankingLessonDemo onBackToModule={handleBackToModule} />
+                  {/* Display different content based on the selected lesson */}
+                  {selectedLesson === 'banking-intro' && (
+                    <BankingLessonDemo 
+                      onBackToModule={handleBackToModule} 
+                      onNextLesson={handleNextLesson}
+                    />
+                  )}
+                  
+                  {selectedLesson === 'account-types' && (
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h2 className="text-2xl font-bold mb-4">Types of Bank Accounts</h2>
+                      <div className="mb-6">
+                        <CharacterDialog
+                          character="cash"
+                          message="Now that you understand how banks work, let's explore the different types of accounts banks offer. Each account type serves different purposes and comes with its own features."
+                          autoClose={false}
+                        />
+                      </div>
+                      
+                      <div className="space-y-6 mt-8">
+                        <div className="border border-blue-200 rounded-lg p-4 bg-blue-50">
+                          <h3 className="text-xl font-semibold mb-2">Checking Accounts</h3>
+                          <p>Designed for everyday transactions like purchases and bill payments. They typically offer unlimited transactions but little to no interest.</p>
+                          <ul className="list-disc pl-5 mt-2">
+                            <li>Easy access via debit cards, checks, and online transfers</li>
+                            <li>May have monthly maintenance fees</li>
+                            <li>Some banks offer free checking with minimum balance or direct deposit</li>
+                          </ul>
+                        </div>
+                        
+                        <div className="border border-green-200 rounded-lg p-4 bg-green-50">
+                          <h3 className="text-xl font-semibold mb-2">Savings Accounts</h3>
+                          <p>Designed to help you save money and earn interest. They have some limitations on withdrawals.</p>
+                          <ul className="list-disc pl-5 mt-2">
+                            <li>Earns higher interest than checking accounts</li>
+                            <li>Limited to 6 withdrawals per month (federal regulation)</li>
+                            <li>Good for emergency funds and short-term savings goals</li>
+                          </ul>
+                        </div>
+                        
+                        <div className="border border-purple-200 rounded-lg p-4 bg-purple-50">
+                          <h3 className="text-xl font-semibold mb-2">Money Market Accounts</h3>
+                          <p>A hybrid between checking and savings accounts, offering higher interest rates with some check-writing privileges.</p>
+                          <ul className="list-disc pl-5 mt-2">
+                            <li>Higher interest rates than regular savings accounts</li>
+                            <li>May require higher minimum balances</li>
+                            <li>Limited transactions similar to savings accounts</li>
+                          </ul>
+                        </div>
+                        
+                        <div className="border border-amber-200 rounded-lg p-4 bg-amber-50">
+                          <h3 className="text-xl font-semibold mb-2">Certificates of Deposit (CDs)</h3>
+                          <p>Time deposits that require you to keep your money in the account for a specific term to earn the full interest.</p>
+                          <ul className="list-disc pl-5 mt-2">
+                            <li>Higher interest rates than savings accounts</li>
+                            <li>Terms range from 3 months to 5+ years</li>
+                            <li>Early withdrawal penalties apply</li>
+                          </ul>
+                        </div>
+                      </div>
+                      
+                      <div className="flex justify-between mt-8">
+                        <button
+                          className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600"
+                          onClick={handleBackToModule}
+                        >
+                          Back to Module
+                        </button>
+                        <button
+                          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                          onClick={handleNextLesson}
+                        >
+                          Next Lesson
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {selectedLesson !== 'banking-intro' && selectedLesson !== 'account-types' && (
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h2 className="text-2xl font-bold mb-4">
+                        {sampleLessons.find(l => l.id === selectedLesson)?.title || 'Lesson'}
+                      </h2>
+                      <div className="mb-6">
+                        <CharacterDialog
+                          character="cash"
+                          message={`This lesson on ${sampleLessons.find(l => l.id === selectedLesson)?.title || 'this topic'} is under development. Check back soon!`}
+                          autoClose={false}
+                        />
+                      </div>
+                      
+                      <div className="flex justify-between mt-8">
+                        <button
+                          className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600"
+                          onClick={handleBackToModule}
+                        >
+                          Back to Module
+                        </button>
+                        <button
+                          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                          onClick={handleNextLesson}
+                        >
+                          Next Lesson
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
