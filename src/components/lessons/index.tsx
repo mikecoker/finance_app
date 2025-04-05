@@ -6,12 +6,14 @@ import { CharacterContainer, CharacterDialog, CharacterGuide } from '@/component
 import { QuizQuestion } from './QuizQuestion';
 import { InteractiveCalculator } from './InteractiveCalculator';
 import { LessonCompletion } from './LessonCompletion';
+import { BankingLessonDemo } from './BankingLessonDemo';
 
 // Export all lesson components for easy imports
 export {
   QuizQuestion,
   InteractiveCalculator,
-  LessonCompletion
+  LessonCompletion,
+  BankingLessonDemo
 };
 
 // Create a demo component to showcase all lesson components together
@@ -158,5 +160,6 @@ export default {
   QuizQuestion,
   InteractiveCalculator,
   LessonCompletion,
+  BankingLessonDemo,
   LessonDemo
 };

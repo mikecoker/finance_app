@@ -18,7 +18,7 @@ const sampleModules: Module[] = [
     character: 'cash',
     level: 'foundation',
     lessons: 5,
-    completedLessons: 2,
+    completedLessons: 0,
     xpReward: 250,
     prerequisites: [],
     unlocked: true,
@@ -93,9 +93,9 @@ const sampleLessons = [
     title: 'Introduction to Banking',
     description: 'Learn what banks are and how they function in the economy.',
     xpReward: 50,
-    completed: true,
+    completed: false,
     locked: false,
-    current: false,
+    current: true,
   },
   {
     id: 'account-types',
@@ -103,7 +103,7 @@ const sampleLessons = [
     title: 'Types of Bank Accounts',
     description: 'Explore checking, savings, and other account types.',
     xpReward: 50,
-    completed: true,
+    completed: false,
     locked: false,
     current: false,
   },
@@ -115,7 +115,7 @@ const sampleLessons = [
     xpReward: 50,
     completed: false,
     locked: false,
-    current: true,
+    current: false,
   },
   {
     id: 'online-banking',
@@ -211,7 +211,7 @@ export default function CourseApp() {
                     Back to Module
                   </button>
                   
-                  <BankingLessonDemo />
+                  <BankingLessonDemo onBackToModule={handleBackToModule} />
                 </div>
               )}
             </div>

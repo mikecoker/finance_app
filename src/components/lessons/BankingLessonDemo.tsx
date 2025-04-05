@@ -91,7 +91,11 @@ const bankingFundamentalsLesson: LessonStep[] = [
   }
 ];
 
-const BankingLessonDemo: React.FC = () => {
+interface BankingLessonDemoProps {
+  onBackToModule?: () => void;
+}
+
+export const BankingLessonDemo: React.FC<BankingLessonDemoProps> = ({ onBackToModule }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -124,6 +128,17 @@ const BankingLessonDemo: React.FC = () => {
     setTimeout(() => {
       setShowReaction(false);
     }, 2000);
+  };
+
+  const handleBackToModules = () => {
+    if (onBackToModule) {
+      onBackToModule();
+    } else {
+      // Fallback if no handler is provided
+      console.log('Back to modules clicked, but no handler provided');
+      // Could redirect to course page as fallback
+      window.location.href = '/course';
+    }
   };
   
   // Animation variants
@@ -287,19 +302,15 @@ const BankingLessonDemo: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex justify-center mb-4">
-                <motion.button
-                  className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Simulate Banking Cycle
-                </motion.button>
+              <div className="text-center mb-6">
+                <p className="mb-2">When you deposit $1,000 in the bank:</p>
+                <ul className="text-left max-w-md mx-auto space-y-2">
+                  <li>• You earn interest (e.g., $10 per year at 1%)</li>
+                  <li>• The bank lends $900 to a home buyer at 4% ($36 per year)</li>
+                  <li>• The bank keeps $100 as a reserve</li>
+                  <li>• The bank makes $26 profit ($36 - $10)</li>
+                </ul>
               </div>
-              
-              <p className="text-center text-sm text-gray-500">
-                (This is a placeholder for an interactive banking cycle simulation)
-              </p>
             </motion.div>
             
             <motion.button
@@ -317,23 +328,26 @@ const BankingLessonDemo: React.FC = () => {
       case 'application':
         return (
           <div className="mb-6">
-            <CharacterDialog
-              character={step.character}
-              message={step.content}
-              autoClose={false}
-            />
+            <motion.div variants={itemVariants}>
+              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+              <p className="mb-4">{step.content}</p>
+            </motion.div>
             
             <motion.div 
-              className="border border-gray-300 rounded-lg p-6 bg-gray-50 mt-6 mb-6"
+              className="border border-gray-300 rounded-lg p-6 bg-gray-50 mb-6"
               variants={itemVariants}
             >
-              <h4 className="font-semibold mb-2">Reflection Questions:</h4>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>What features do you need in a bank account? (e.g., mobile banking, low fees)</li>
-                <li>How often do you need to withdraw cash?</li>
-                <li>Do you need to earn interest on your balance?</li>
-                <li>Would you prefer a local bank or an online bank?</li>
+              <h4 className="font-semibold mb-3">Consider these questions:</h4>
+              <ul className="space-y-2 mb-4">
+                <li>1. Do you need frequent access to your money?</li>
+                <li>2. Are you looking to earn interest on your savings?</li>
+                <li>3. Do you want to avoid monthly fees?</li>
+                <li>4. Do you need in-person banking services or is online banking sufficient?</li>
               </ul>
+              
+              <p className="text-sm text-gray-600 italic">
+                Think about these questions as you consider your banking needs. In future lessons, we'll explore different account types in detail.
+              </p>
             </motion.div>
             
             <motion.button
@@ -350,40 +364,51 @@ const BankingLessonDemo: React.FC = () => {
         
       case 'complete':
         return (
-          <div className="mb-6 text-center">
+          <div className="mb-6">
             <motion.div 
-              className="mb-6"
+              className="text-center mb-6"
               variants={itemVariants}
             >
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">✅</span>
               </div>
               <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-              <p>{step.content}</p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6"
-              variants={itemVariants}
-            >
-              <h4 className="font-semibold mb-2">You've earned:</h4>
-              <p className="text-xl font-bold text-blue-600">+50 XP</p>
-              <div className="flex items-center justify-center mt-2">
-                <div className="w-full max-w-xs bg-gray-200 rounded-full h-2.5">
-                  <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '45%' }}></div>
+              <p className="mb-4">{step.content}</p>
+              
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 mb-6 max-w-md mx-auto">
+                <h4 className="font-semibold mb-2">You've earned:</h4>
+                <p className="text-xl font-bold text-blue-600">+50 XP</p>
+                <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                  <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '20%' }}></div>
                 </div>
-                <span className="ml-2 text-sm">45%</span>
+                <p className="text-sm mt-1">20% of module complete</p>
               </div>
             </motion.div>
             
-            <motion.button
-              className="mt-4 px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 mx-auto"
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Back to Modules
-            </motion.button>
+            <div className="flex justify-center gap-4">
+              <motion.button
+                className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600"
+                onClick={handleBackToModules}
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Back to Module
+              </motion.button>
+              
+              <motion.button
+                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                onClick={() => {
+                  // In a real app, this would navigate to the next lesson
+                  handleBackToModules();
+                }}
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Next Lesson
+              </motion.button>
+            </div>
           </div>
         );
         
@@ -393,41 +418,40 @@ const BankingLessonDemo: React.FC = () => {
   };
   
   return (
-    <div className="max-w-3xl mx-auto p-4 md:p-6">
-      <motion.div
-        className="bg-white rounded-xl shadow-lg p-6"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <motion.div variants={itemVariants} className="mb-6">
-          <h2 className="text-2xl font-bold">Banking Fundamentals</h2>
-          <div className="w-full bg-gray-200 rounded-full h-2.5 mt-2">
-            <div 
-              className="bg-blue-600 h-2.5 rounded-full" 
-              style={{ width: `${(currentStep / (lesson.length - 1)) * 100}%` }}
-            ></div>
-          </div>
-          <p className="text-sm text-gray-500 mt-1">
-            Lesson {currentStep + 1} of {lesson.length}
-          </p>
-        </motion.div>
-        
-        {renderStepContent()}
-        
-        {showReaction && (
-          <div className="fixed bottom-4 right-4">
-            <CharacterReaction
-              character={step.character}
-              emotion={reactionEmotion}
-              size="medium"
-            />
-          </div>
-        )}
-      </motion.div>
-    </div>
+    <motion.div 
+      className="max-w-3xl mx-auto p-4 md:p-6"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      {/* Progress bar */}
+      <div className="mb-6">
+        <div className="flex justify-between text-sm mb-1">
+          <span>Lesson Progress</span>
+          <span>{currentStep + 1} of {lesson.length}</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2.5">
+          <div 
+            className="bg-blue-600 h-2.5 rounded-full" 
+            style={{ width: `${((currentStep + 1) / lesson.length) * 100}%` }}
+          ></div>
+        </div>
+      </div>
+      
+      {/* Character reaction overlay */}
+      {showReaction && (
+        <CharacterReaction
+          character="cash"
+          emotion={reactionEmotion}
+        />
+      )}
+      
+      {/* Main content */}
+      {renderStepContent()}
+    </motion.div>
   );
 };
 
+// Export the component as default as well
 export default BankingLessonDemo;
