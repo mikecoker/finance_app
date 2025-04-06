@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "taxxy",
+    "title": "Tax-Advantaged Accounts",
+    "content": "Welcome to our third lesson in Tax Essentials! I'm Taxxy, and today we'll explore tax-advantaged accounts that can help you save for retirement, healthcare, and education while providing valuable tax benefits. These accounts are powerful tools for building wealth and reducing your tax burden."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Retirement Accounts: Traditional vs. Roth",
+    "content": "The two main types of tax-advantaged retirement accounts are Traditional and Roth. With Traditional accounts (401(k)s, IRAs), contributions are tax-deductible now, but withdrawals in retirement are taxed as income. With Roth accounts, contributions are made with after-tax dollars, but qualified withdrawals in retirement are completely tax-free. Your choice depends on whether you expect to be in a higher or lower tax bracket in retirement."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Employer-Sponsored Plans",
+    "content": "Many employers offer retirement plans like 401(k)s, 403(b)s, or 457 plans. These plans allow higher contribution limits than IRAs and often include employer matching contributions—essentially free money. For 2023, you can contribute up to $22,500 to a 401(k), plus an additional $7,500 if you're 50 or older. Always contribute at least enough to get the full employer match."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Individual Retirement Accounts (IRAs)",
+    "content": "IRAs are retirement accounts you open independently of your employer. Traditional and Roth IRAs have contribution limits of $6,500 per year (2023), plus an additional $1,000 if you're 50 or older. Eligibility for Roth IRA contributions phases out at higher income levels. IRAs offer more investment options than most employer plans but have lower contribution limits."
+  },
+  {
+    "type": "quiz",
+    "character": "taxxy",
+    "title": "Quick Check",
+    "content": "Which type of retirement account allows for tax-free withdrawals in retirement?",
+    "options": [
+      {
+        "text": "Traditional 401(k)",
+        "correct": false,
+        "feedback": "Traditional 401(k) withdrawals are taxed as ordinary income in retirement."
+      },
+      {
+        "text": "Traditional IRA",
+        "correct": false,
+        "feedback": "Traditional IRA withdrawals are taxed as ordinary income in retirement."
+      },
+      {
+        "text": "Roth 401(k) or Roth IRA",
+        "correct": true,
+        "feedback": "Correct! Roth accounts are funded with after-tax dollars, allowing qualified withdrawals to be completely tax-free in retirement."
+      },
+      {
+        "text": "SEP IRA",
+        "correct": false,
+        "feedback": "SEP IRA withdrawals are taxed as ordinary income in retirement, similar to Traditional IRAs."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Health Savings Accounts (HSAs)",
+    "content": "HSAs offer triple tax advantages: tax-deductible contributions, tax-free growth, and tax-free withdrawals for qualified medical expenses. To qualify, you must be enrolled in a high-deductible health plan. For 2023, you can contribute up to $3,850 (individual) or $7,750 (family), plus an additional $1,000 if you're 55 or older. Unlike FSAs, HSA funds roll over year to year and can be invested for long-term growth."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Education Savings Accounts",
+    "content": "529 Plans and Coverdell Education Savings Accounts (ESAs) offer tax advantages for education savings. Contributions aren't federally tax-deductible, but earnings grow tax-free and withdrawals for qualified education expenses are tax-free. Many states offer tax deductions for 529 contributions. 529 plans have no income limits and high contribution limits, while Coverdell ESAs have income limits and are capped at $2,000 per beneficiary per year."
+  },
+  {
+    "type": "interactive",
+    "character": "taxxy",
+    "title": "Account Comparison Tool",
+    "content": "Let's compare different tax-advantaged accounts based on your specific situation. We'll look at contribution limits, tax benefits, withdrawal rules, and potential growth to help you determine which accounts might be most beneficial for your financial goals."
+  },
+  {
+    "type": "application",
+    "character": "taxxy",
+    "title": "Real-World Application",
+    "content": "Review your current retirement and savings accounts. Are you maximizing your tax advantages? Consider increasing contributions to employer-sponsored plans at least to the match level, opening an IRA if you don't have one, or starting an HSA if you're eligible. Calculate how much you could save in taxes this year by optimizing your contributions to these accounts."
+  },
+  {
+    "type": "complete",
+    "character": "taxxy",
+    "title": "Lesson Complete!",
+    "content": "Excellent work! You've completed the lesson on tax-advantaged accounts. You now understand the different types of retirement accounts, health savings accounts, and education savings accounts, along with their respective tax benefits. In the next lesson, we'll explore tax deductions and credits in more detail to help you minimize your tax liability."
+  }
+]
