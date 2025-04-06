@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "investra",
+    "title": "Healthcare in Retirement",
+    "content": "Welcome to our fifth lesson in Retirement Planning! I'm Investra, and today we'll explore healthcare considerations for retirement. Healthcare costs can be one of the largest expenses in retirement, so understanding your options and planning accordingly is essential for financial security."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Medicare Basics",
+    "content": "Medicare is the federal health insurance program for people 65 and older. It consists of: Part A (hospital insurance, usually premium-free), Part B (medical insurance, with a monthly premium), Part C (Medicare Advantage plans offered by private companies), and Part D (prescription drug coverage). Most people should enroll during their Initial Enrollment Period (three months before through three months after their 65th birthday) to avoid permanent late enrollment penalties, unless they have qualifying employer coverage."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Medicare Costs and Coverage Gaps",
+    "content": "While Medicare provides valuable coverage, it doesn't cover everything. Notable gaps include: Limited prescription drug coverage, no coverage for most dental, vision, or hearing care, limited long-term care coverage, and various deductibles, copays, and coinsurance. To address these gaps, many retirees purchase Medicare Supplement (Medigap) policies or choose Medicare Advantage plans. For 2023, the average couple retiring at 65 is projected to need approximately $315,000 saved specifically for healthcare costs in retirement, not including long-term care."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Long-Term Care Planning",
+    "content": "Long-term care—assistance with daily activities due to chronic illness, disability, or cognitive impairment—is a significant retirement risk. About 70% of people over 65 will need some form of long-term care, with the average need lasting about three years. Medicare provides very limited coverage for long-term care, and costs can be substantial: the national median cost for a private nursing home room exceeds $100,000 annually. Planning options include long-term care insurance, hybrid life insurance/long-term care policies, self-funding through savings, and Medicaid (which requires spending down assets)."
+  },
+  {
+    "type": "quiz",
+    "character": "investra",
+    "title": "Quick Check",
+    "content": "Which of the following is NOT typically covered by Original Medicare (Parts A and B)?",
+    "options": [
+      {
+        "text": "Hospital stays",
+        "correct": false,
+        "feedback": "Hospital stays are covered under Medicare Part A, though deductibles and coinsurance may apply."
+      },
+      {
+        "text": "Doctor visits",
+        "correct": false,
+        "feedback": "Doctor visits are covered under Medicare Part B, subject to deductibles and coinsurance."
+      },
+      {
+        "text": "Prescription drugs",
+        "correct": true,
+        "feedback": "Correct! Prescription drugs are not covered by Original Medicare (Parts A and B). You need to enroll in a separate Part D plan or a Medicare Advantage plan with drug coverage."
+      },
+      {
+        "text": "Preventive services",
+        "correct": false,
+        "feedback": "Many preventive services are covered under Medicare Part B, often with no cost-sharing if provided by participating providers."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Health Savings Accounts (HSAs)",
+    "content": "Health Savings Accounts (HSAs) offer triple tax advantages: tax-deductible contributions, tax-free growth, and tax-free withdrawals for qualified medical expenses. To contribute, you must be enrolled in a high-deductible health plan. While you can't contribute to an HSA after enrolling in Medicare, funds accumulated before Medicare enrollment can be used tax-free for qualified medical expenses in retirement, including Medicare premiums. This makes HSAs a powerful vehicle for healthcare savings, functioning as a medical IRA with even better tax benefits."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Early Retirement Healthcare Strategies",
+    "content": "If you retire before Medicare eligibility at 65, you'll need to bridge the healthcare gap. Options include: COBRA coverage from your former employer (typically limited to 18 months), spouse's employer plan, Affordable Care Act marketplace plans (possibly with subsidies based on income), part-time employment with health benefits, or private insurance. Each option has different costs, coverage levels, and eligibility requirements. Healthcare costs should be a major consideration in early retirement planning, as they can significantly impact your savings needs."
+  },
+  {
+    "type": "interactive",
+    "character": "investra",
+    "title": "Healthcare Cost Estimator",
+    "content": "Let's estimate your potential healthcare costs in retirement based on your age, expected retirement date, health status, and coverage choices. We'll explore how different Medicare options and potential long-term care needs might affect your overall retirement budget."
+  },
+  {
+    "type": "application",
+    "character": "investra",
+    "title": "Real-World Application",
+    "content": "If you're still working and have access to a Health Savings Account, consider maximizing your contributions to build a healthcare fund for retirement. If you're approaching 65, research Medicare options and create a calendar with important enrollment deadlines. For those already in retirement, review your current healthcare coverage to ensure it still meets your needs during the annual Medicare Open Enrollment period (October 15-December 7). Consider consulting with a healthcare planning specialist to develop a comprehensive strategy for managing healthcare costs in retirement."
+  },
+  {
+    "type": "complete",
+    "character": "investra",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the lesson on healthcare in retirement. You now understand Medicare basics, coverage gaps, long-term care considerations, Health Savings Accounts, and strategies for managing healthcare before Medicare eligibility. In our final lesson, we'll explore estate planning to help you protect your assets and legacy."
+  }
+]

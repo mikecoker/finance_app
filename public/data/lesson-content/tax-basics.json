@@ -1,0 +1,78 @@
+[
+  {
+    "type": "intro",
+    "character": "taxxy",
+    "title": "Introduction to Taxation",
+    "content": "Welcome to Tax Essentials! I'm Taxxy, your guide to understanding the fundamentals of taxation. In this lesson, we'll explore what taxes are, why they exist, and the basic types of taxes you'll encounter in your financial life."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "What Are Taxes?",
+    "content": "Taxes are mandatory financial charges imposed by governments on individuals and businesses to fund public services and infrastructure. These include everything from roads and schools to healthcare and national defense. Taxes are a legal obligation, and failure to pay can result in penalties or legal consequences."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Types of Taxes",
+    "content": "There are several types of taxes you'll encounter: Income taxes (federal, state, local) on earnings; Sales taxes on purchases; Property taxes on real estate; Payroll taxes for Social Security and Medicare; Capital gains taxes on investment profits; and Excise taxes on specific goods like gasoline or alcohol. Each serves different purposes in the overall tax system."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "The Progressive Tax System",
+    "content": "The U.S. uses a progressive income tax system, meaning tax rates increase as your income rises. Income is divided into tax brackets, each with its own rate. Importantly, only the income within each bracket is taxed at that bracket's rate—not your entire income. This is a common misconception that leads many to misunderstand how their taxes are calculated."
+  },
+  {
+    "type": "quiz",
+    "character": "taxxy",
+    "title": "Quick Check",
+    "content": "In a progressive tax system, if you move into a higher tax bracket, what happens?",
+    "options": [
+      {
+        "text": "All of your income is taxed at the higher rate",
+        "correct": false,
+        "feedback": "This is a common misconception. Only the portion of your income that falls within the higher bracket is taxed at the higher rate."
+      },
+      {
+        "text": "Only the portion of income in the higher bracket is taxed at the higher rate",
+        "correct": true,
+        "feedback": "Correct! This is how a progressive tax system works. Each portion of your income is taxed according to the bracket it falls into."
+      },
+      {
+        "text": "Your entire tax bill is calculated based on your highest bracket",
+        "correct": false,
+        "feedback": "This would result in much higher taxes than our actual system. The progressive system taxes different portions of income at different rates."
+      },
+      {
+        "text": "You pay a flat percentage based on your total income",
+        "correct": false,
+        "feedback": "This describes a flat tax system, not a progressive one. The U.S. federal income tax is progressive with different rates for different income levels."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Tax Year and Filing Deadlines",
+    "content": "The tax year in the U.S. runs from January 1 to December 31. Most taxpayers must file their federal income tax return by April 15 of the following year (or the next business day if it falls on a weekend or holiday). Extensions are available, but they only extend the filing deadline, not the payment deadline—any taxes owed are still due by the original deadline."
+  },
+  {
+    "type": "interactive",
+    "character": "taxxy",
+    "title": "Tax Bracket Calculator",
+    "content": "Let's explore how the progressive tax system works with a simple calculator. Enter your taxable income to see how it's divided across different tax brackets and calculate your effective tax rate."
+  },
+  {
+    "type": "application",
+    "character": "taxxy",
+    "title": "Real-World Application",
+    "content": "Take some time to gather your recent tax documents, including W-2 forms from employers, 1099 forms for other income, and any tax returns from previous years. Familiarize yourself with these documents to better understand your personal tax situation and prepare for future lessons on tax planning and optimization."
+  },
+  {
+    "type": "complete",
+    "character": "taxxy",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the introduction to taxation. You now understand what taxes are, the different types of taxes, how the progressive tax system works, and important deadlines. In the next lesson, we'll explore income tax in more detail, including deductions and credits that can reduce your tax liability."
+  }
+]

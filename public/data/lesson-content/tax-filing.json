@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "taxxy",
+    "title": "Tax Filing and Preparation",
+    "content": "Welcome to our sixth lesson in Tax Essentials! I'm Taxxy, and today we'll explore the process of filing your tax return. Whether you prepare your taxes yourself or work with a professional, understanding the filing process will help you ensure accuracy and avoid common pitfalls."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Gathering Your Documents",
+    "content": "The first step in tax preparation is gathering all necessary documents. These typically include: income documents (W-2s, 1099s), expense records (medical expenses, charitable donations, business expenses), investment statements (1099-DIV, 1099-INT, 1099-B), home-related documents (mortgage interest, property taxes), and prior year's tax return. Creating a tax folder at the beginning of each year can help you organize these documents as they arrive."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Filing Methods",
+    "content": "You have several options for filing your tax return: DIY software (TurboTax, H&R Block, TaxAct), Free File programs (IRS Free File for those with income below $73,000), professional tax preparers (CPAs, Enrolled Agents), or paper filing (least recommended due to longer processing times and higher error rates). Your choice depends on your comfort level with tax concepts, the complexity of your tax situation, and your budget."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Common Filing Mistakes",
+    "content": "Several common mistakes can delay your refund or trigger IRS notices: Math errors (less common with software), missing or incorrect Social Security numbers, forgetting to sign your return, missing the filing deadline, overlooking tax credits or deductions, and failing to report all income. Taking your time and reviewing your return carefully before filing can help avoid these issues."
+  },
+  {
+    "type": "quiz",
+    "character": "taxxy",
+    "title": "Quick Check",
+    "content": "Which of the following is NOT a recommended tax filing method?",
+    "options": [
+      {
+        "text": "Using tax preparation software",
+        "correct": false,
+        "feedback": "Tax preparation software is a recommended filing method, especially for those with straightforward tax situations."
+      },
+      {
+        "text": "Hiring a professional tax preparer",
+        "correct": false,
+        "feedback": "Professional tax preparers like CPAs or Enrolled Agents are recommended, especially for complex tax situations."
+      },
+      {
+        "text": "Using the IRS Free File program",
+        "correct": false,
+        "feedback": "The IRS Free File program is a recommended option for taxpayers with income below certain thresholds."
+      },
+      {
+        "text": "Asking a friend to prepare your taxes informally",
+        "correct": true,
+        "feedback": "Correct! Having an unqualified friend prepare your taxes informally is not recommended. You should use official software, qualified professionals, or IRS-approved programs."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Filing Extensions",
+    "content": "If you need more time to file your return, you can request an automatic six-month extension using Form 4868. However, an extension to file is not an extension to pay—you must still estimate and pay any taxes owed by the original deadline (usually April 15) to avoid penalties and interest. Extensions are particularly useful if you're missing information needed to complete your return accurately."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "After You File",
+    "content": "After filing, keep copies of your return and supporting documents for at least three years (the standard IRS audit window), though some experts recommend seven years. If you're expecting a refund, you can check its status using the IRS 'Where's My Refund?' tool. Most refunds are issued within 21 days of filing. If you owe additional tax, various payment options are available, including installment agreements if you can't pay in full."
+  },
+  {
+    "type": "interactive",
+    "character": "taxxy",
+    "title": "Filing Method Selector",
+    "content": "Let's determine which filing method might be best for your situation. We'll consider factors like your income level, the complexity of your tax situation, your comfort with tax concepts, and your budget to recommend whether DIY software, Free File, or a professional preparer might be most appropriate."
+  },
+  {
+    "type": "application",
+    "character": "taxxy",
+    "title": "Real-World Application",
+    "content": "Create a tax preparation checklist for next year. List all the documents you'll need to gather, set reminders for important tax deadlines, and decide which filing method you'll use. If you're considering a tax professional, research options in your area and check their credentials. Remember that the best time to prepare for next year's taxes is right after filing this year's return, when the process is fresh in your mind."
+  },
+  {
+    "type": "complete",
+    "character": "taxxy",
+    "title": "Lesson Complete!",
+    "content": "Excellent work! You've completed the lesson on tax filing and preparation. You now understand how to gather necessary documents, choose a filing method, avoid common mistakes, request extensions if needed, and what to do after filing. In the next lesson, we'll explore tax audits and notices, including how to respond if you hear from the IRS."
+  }
+]

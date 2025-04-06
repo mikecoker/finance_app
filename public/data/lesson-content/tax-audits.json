@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "taxxy",
+    "title": "Tax Audits and Notices",
+    "content": "Welcome to our final lesson in Tax Essentials! I'm Taxxy, and today we'll explore tax audits and notices from the IRS. While receiving communication from the IRS might seem intimidating, understanding the process can help you respond appropriately and minimize stress."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Understanding IRS Notices",
+    "content": "The IRS sends millions of notices each year for various reasons: to request payment, notify you of account changes, request additional information, or inform you of processing delays. Each notice has a specific number (CP or LTR followed by numbers) in the upper right corner that identifies its purpose. Most notices are not audits and can be resolved by simply providing information or making a payment."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Types of Audits",
+    "content": "The IRS conducts several types of audits: Correspondence audits (conducted entirely by mail), Office audits (you're asked to bring specific documents to an IRS office), and Field audits (an IRS agent visits your home or business). Most audits are correspondence audits focusing on specific items on your return. The IRS typically has three years from the filing date to audit a return, though this can extend to six years for substantial underreporting."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Audit Selection",
+    "content": "Returns are selected for audit based on several factors: Random selection, Computer screening (returns with unusual deductions or credits compared to income), Related examinations (connections to other taxpayers being audited), and Document matching (discrepancies between your return and information reported by employers, banks, etc.). While you can't prevent random selection, maintaining accurate records and avoiding common red flags can reduce audit risk."
+  },
+  {
+    "type": "quiz",
+    "character": "taxxy",
+    "title": "Quick Check",
+    "content": "What should you do first when you receive an IRS notice?",
+    "options": [
+      {
+        "text": "Ignore it and hope the issue resolves itself",
+        "correct": false,
+        "feedback": "Ignoring IRS notices is never recommended and can lead to additional penalties, interest, or escalation of the issue."
+      },
+      {
+        "text": "Call the IRS immediately without reviewing the notice",
+        "correct": false,
+        "feedback": "While contacting the IRS may be necessary, you should first carefully read and understand the notice to prepare for the conversation."
+      },
+      {
+        "text": "Read the notice carefully to understand what it's requesting",
+        "correct": true,
+        "feedback": "Correct! The first step should always be to carefully read the notice to understand what the IRS is requesting and the timeframe for response."
+      },
+      {
+        "text": "Hire a tax attorney regardless of the notice type",
+        "correct": false,
+        "feedback": "While professional help may be needed for complex issues or audits, many notices are simple and can be handled without legal representation."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Responding to Notices",
+    "content": "When responding to an IRS notice: Respond by the deadline to avoid additional penalties or interest; Only provide the specific information requested, not your entire return; Keep copies of all correspondence; Consider certified mail for proof of delivery; and Follow up if you don't hear back within the timeframe specified in the notice. For simple notices, you can often respond directly, while for more complex issues, professional assistance may be beneficial."
+  },
+  {
+    "type": "content",
+    "character": "taxxy",
+    "title": "Handling an Audit",
+    "content": "If you're selected for an audit: Stay calm and organized; Gather all relevant documentation; Consider professional representation (CPA, Enrolled Agent, or tax attorney); Only provide what's requested; Be professional and courteous; and Know your rights as a taxpayer. Remember that audits are often limited to specific items, not your entire return. The Taxpayer Bill of Rights outlines your rights during an audit, including the right to professional treatment and the right to appeal disagreements."
+  },
+  {
+    "type": "interactive",
+    "character": "taxxy",
+    "title": "Notice Decoder",
+    "content": "Let's explore common IRS notices and what they mean. We'll look at different notice numbers, their typical purposes, and recommended response strategies to help you feel more confident if you receive one."
+  },
+  {
+    "type": "application",
+    "character": "taxxy",
+    "title": "Real-World Application",
+    "content": "Create a tax record-keeping system to prepare for potential future notices or audits. Organize receipts, statements, and other tax documents by year and category. Consider digitizing records for easier storage and retrieval. Establish a process for handling any IRS correspondence promptly, including a designated location for notices and a calendar reminder system for response deadlines."
+  },
+  {
+    "type": "complete",
+    "character": "taxxy",
+    "title": "Module Complete!",
+    "content": "Congratulations! You've completed the entire Tax Essentials module. You now understand the fundamentals of taxation, income tax, tax-advantaged accounts, deductions and credits, tax planning strategies, tax filing and preparation, and how to handle notices and audits. This knowledge will help you navigate the tax system more confidently and potentially save money through informed tax decisions."
+  }
+]

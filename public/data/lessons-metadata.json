@@ -46,7 +46,207 @@
     "description": "Protect your accounts and personal information.",
     "xpReward": 50,
     "completed": false,
-    "locked": true,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "budgeting-intro",
+    "moduleId": "budgeting-basics",
+    "title": "Budgeting Basics",
+    "description": "Learn the fundamentals of creating a personal budget.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "expense-tracking",
+    "moduleId": "budgeting-basics",
+    "title": "Expense Tracking",
+    "description": "Master techniques for tracking and categorizing expenses.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "credit-scores",
+    "moduleId": "credit-cards-101",
+    "title": "Understanding Credit Scores",
+    "description": "Learn what makes up your credit score and why it matters.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "credit-cards",
+    "moduleId": "credit-cards-101",
+    "title": "Credit Card Basics",
+    "description": "Understand how credit cards work and their key features.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "personal-loans",
+    "moduleId": "credit-cards-101",
+    "title": "Personal Loans",
+    "description": "Explore different types of personal loans and their uses.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "student-loans",
+    "moduleId": "credit-cards-101",
+    "title": "Student Loans",
+    "description": "Navigate the complexities of student loan borrowing and repayment.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "investing-basics",
+    "moduleId": "investing-basics",
+    "title": "Introduction to Investing",
+    "description": "Learn the fundamentals of investing and building wealth.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "tax-basics",
+    "moduleId": "tax-essentials",
+    "title": "Introduction to Taxation",
+    "description": "Learn what taxes are, why they exist, and the basic types of taxes.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "income-tax",
+    "moduleId": "tax-essentials",
+    "title": "Understanding Income Tax",
+    "description": "Explore taxable income, deductions, credits, and filing statuses.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "tax-advantaged-accounts",
+    "moduleId": "tax-essentials",
+    "title": "Tax-Advantaged Accounts",
+    "description": "Discover accounts that help you save for retirement, healthcare, and education while providing tax benefits.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "tax-deductions-credits",
+    "moduleId": "tax-essentials",
+    "title": "Tax Deductions and Credits",
+    "description": "Learn about various tax benefits that can reduce your tax liability.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "tax-planning",
+    "moduleId": "tax-essentials",
+    "title": "Tax Planning Strategies",
+    "description": "Explore strategies to legally minimize your tax burden.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "tax-filing",
+    "moduleId": "tax-essentials",
+    "title": "Tax Filing and Preparation",
+    "description": "Understand the process of filing your tax return and available filing methods.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "tax-audits",
+    "moduleId": "tax-essentials",
+    "title": "Tax Audits and Notices",
+    "description": "Learn how to handle communications from the IRS and navigate the audit process.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "retirement-basics",
+    "moduleId": "retirement-planning",
+    "title": "Retirement Planning Basics",
+    "description": "Learn the fundamentals of retirement planning and why starting early is important.",
+    "xpReward": 75,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "retirement-accounts",
+    "moduleId": "retirement-planning",
+    "title": "Retirement Accounts",
+    "description": "Explore various retirement accounts and their tax advantages.",
+    "xpReward": 75,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "retirement-investments",
+    "moduleId": "retirement-planning",
+    "title": "Retirement Investment Strategies",
+    "description": "Learn investment strategies specifically for retirement savings.",
+    "xpReward": 75,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "retirement-income",
+    "moduleId": "retirement-planning",
+    "title": "Retirement Income Planning",
+    "description": "Discover how to convert your retirement savings into sustainable income.",
+    "xpReward": 75,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "retirement-healthcare",
+    "moduleId": "retirement-planning",
+    "title": "Healthcare in Retirement",
+    "description": "Understand Medicare, long-term care, and healthcare planning for retirement.",
+    "xpReward": 75,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "estate-planning",
+    "moduleId": "retirement-planning",
+    "title": "Estate Planning",
+    "description": "Learn how to protect your assets and legacy through proper estate planning.",
+    "xpReward": 75,
+    "completed": false,
+    "locked": false,
     "current": false
   }
 ]

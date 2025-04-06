@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "investra",
+    "title": "Retirement Planning Basics",
+    "content": "Welcome to the Retirement Planning module! I'm Investra, and I'll be your guide as we explore how to prepare financially for your retirement years. In this first lesson, we'll cover the fundamentals of retirement planning and why starting early is so important."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Why Retirement Planning Matters",
+    "content": "Retirement planning is essential because people are living longer than ever before. The average retirement now lasts 20-30 years, meaning you'll need sufficient savings to support yourself for decades without employment income. Social Security alone typically replaces only about 40% of pre-retirement income for average earners, while most financial experts recommend having 70-80% of your pre-retirement income to maintain your standard of living."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "The Power of Compound Growth",
+    "content": "Starting early is crucial due to compound growth—when your investment earnings generate their own earnings. For example, if you invest $5,000 annually from age 25 to 35 (10 years, $50,000 total) and then stop, you could have more money at retirement than someone who invests $5,000 annually from age 35 to 65 (30 years, $150,000 total), assuming the same rate of return. This dramatic difference demonstrates why even small contributions early in your career can have an enormous impact."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "The Three Pillars of Retirement",
+    "content": "A secure retirement typically rests on three pillars: Social Security (government benefits based on your work history), employer-sponsored retirement plans (401(k)s, pensions), and personal savings and investments (IRAs, brokerage accounts, etc.). Most people need all three pillars to achieve financial security in retirement. Relying too heavily on any single source can leave you vulnerable to policy changes, market fluctuations, or personal circumstances."
+  },
+  {
+    "type": "quiz",
+    "character": "investra",
+    "title": "Quick Check",
+    "content": "Why is starting retirement savings early so advantageous?",
+    "options": [
+      {
+        "text": "Early contributions are taxed at a lower rate",
+        "correct": false,
+        "feedback": "While tax advantages exist for retirement accounts, the tax rate depends on your income and the type of account, not when you start contributing."
+      },
+      {
+        "text": "The power of compound growth over time",
+        "correct": true,
+        "feedback": "Correct! Compound growth means your investment earnings generate their own earnings over time, creating a snowball effect that significantly increases your savings the earlier you start."
+      },
+      {
+        "text": "Retirement accounts have higher contribution limits for younger people",
+        "correct": false,
+        "feedback": "Contribution limits for retirement accounts are generally the same regardless of age, with some plans actually allowing higher 'catch-up' contributions for older individuals."
+      },
+      {
+        "text": "Social Security benefits are higher for those who save early",
+        "correct": false,
+        "feedback": "Social Security benefits are based on your work history and earnings, not on how early you start saving for retirement."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Setting Retirement Goals",
+    "content": "Effective retirement planning begins with setting clear goals. Consider: At what age do you want to retire? What lifestyle do you envision? Where will you live? What activities or travel do you plan to pursue? Will you work part-time? These questions help determine how much you'll need to save. A common rule of thumb is to accumulate 25 times your expected annual expenses in retirement, based on the '4% rule' which suggests withdrawing 4% of your nest egg annually for a sustainable retirement income."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Retirement Planning by Age",
+    "content": "Your retirement strategy should evolve throughout your life. In your 20s-30s, focus on starting to save and taking appropriate investment risk for long-term growth. In your 40s-50s, accelerate savings as you reach peak earning years and refine your retirement vision. In your 50s-60s, begin transitioning to more conservative investments, maximize catch-up contributions, and develop a specific retirement income plan. This age-based approach helps ensure you're taking appropriate actions at each life stage."
+  },
+  {
+    "type": "interactive",
+    "character": "investra",
+    "title": "Retirement Calculator",
+    "content": "Let's use a retirement calculator to estimate how much you might need to save for retirement. We'll input your current age, desired retirement age, expected lifestyle, and current savings to generate a personalized savings target and monthly contribution recommendation."
+  },
+  {
+    "type": "application",
+    "character": "investra",
+    "title": "Real-World Application",
+    "content": "Take some time to envision your ideal retirement. Write down your retirement goals, including at what age you'd like to retire, where you might live, and what activities you want to pursue. Then, check if you're currently enrolled in your employer's retirement plan. If not, contact your HR department to sign up. If you're self-employed or don't have access to an employer plan, research opening an IRA. Even small steps now can make a big difference in your retirement security."
+  },
+  {
+    "type": "complete",
+    "character": "investra",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the introduction to retirement planning. You now understand why retirement planning matters, the power of compound growth, the three pillars of retirement, how to set retirement goals, and how your strategy should evolve with age. In the next lesson, we'll explore retirement accounts in detail, including 401(k)s, IRAs, and other tax-advantaged options."
+  }
+]

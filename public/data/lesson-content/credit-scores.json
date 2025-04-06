@@ -1,0 +1,75 @@
+{
+  "steps": [
+    {
+      "type": "intro",
+      "character": "cash",
+      "text": "Welcome to our lesson on Credit Scores! Understanding your credit score is essential for your financial health."
+    },
+    {
+      "type": "content",
+      "title": "What is a Credit Score?",
+      "content": "A credit score is a three-digit number that represents your creditworthiness. It's calculated based on your credit history and helps lenders determine how likely you are to repay borrowed money.\n\nCredit scores typically range from 300 to 850, with higher scores indicating better creditworthiness. The most common credit scoring model is FICO, but there are others like VantageScore."
+    },
+    {
+      "type": "content",
+      "title": "Factors That Affect Your Credit Score",
+      "content": "Your credit score is influenced by several factors:\n\n1. **Payment History (35%)**: Whether you've paid bills on time\n2. **Credit Utilization (30%)**: How much of your available credit you're using\n3. **Length of Credit History (15%)**: How long you've had credit accounts\n4. **Credit Mix (10%)**: The variety of credit accounts you have\n5. **New Credit (10%)**: How many new accounts you've opened recently"
+    },
+    {
+      "type": "quiz",
+      "question": "Which factor has the biggest impact on your credit score?",
+      "options": [
+        "Credit utilization",
+        "Payment history",
+        "Length of credit history",
+        "New credit inquiries"
+      ],
+      "correctIndex": 1,
+      "feedback": {
+        "correct": "That's right! Payment history accounts for about 35% of your credit score, making it the most influential factor.",
+        "incorrect": "Not quite. Payment history accounts for about 35% of your credit score, making it the most influential factor."
+      }
+    },
+    {
+      "type": "content",
+      "title": "Credit Score Ranges",
+      "content": "Credit scores are typically categorized into ranges:\n\n- **Excellent**: 800-850\n- **Very Good**: 740-799\n- **Good**: 670-739\n- **Fair**: 580-669\n- **Poor**: 300-579\n\nThe higher your score, the better interest rates and terms you'll qualify for on loans and credit cards."
+    },
+    {
+      "type": "interactive",
+      "title": "How Interest Rates Change Based on Credit Score",
+      "description": "Drag the slider to see how different credit scores affect the interest rate on a $20,000 auto loan.",
+      "interactionType": "slider",
+      "data": {
+        "min": 500,
+        "max": 800,
+        "step": 50,
+        "initialValue": 650,
+        "valueMapping": [
+          {"value": 500, "result": "18.5% interest rate, $590 monthly payment"},
+          {"value": 550, "result": "14.9% interest rate, $545 monthly payment"},
+          {"value": 600, "result": "11.2% interest rate, $505 monthly payment"},
+          {"value": 650, "result": "7.5% interest rate, $465 monthly payment"},
+          {"value": 700, "result": "5.2% interest rate, $440 monthly payment"},
+          {"value": 750, "result": "3.9% interest rate, $425 monthly payment"},
+          {"value": 800, "result": "2.9% interest rate, $415 monthly payment"}
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "title": "How to Check Your Credit Score",
+      "content": "You can check your credit score in several ways:\n\n- Through your credit card issuer (many offer free credit scores)\n- Using free services like Credit Karma or Credit Sesame\n- Purchasing your score directly from FICO or credit bureaus\n- Getting your annual free credit report from annualcreditreport.com\n\nIt's a good idea to check your credit score regularly to monitor changes and spot potential errors or fraud."
+    },
+    {
+      "type": "application",
+      "title": "Improving Your Credit Score",
+      "content": "Here are practical steps you can take to improve your credit score:\n\n1. **Pay all bills on time**\n2. **Reduce credit card balances** (aim to use less than 30% of your available credit)\n3. **Don't close old credit accounts** (length of history matters)\n4. **Limit applications for new credit**\n5. **Regularly check your credit report** for errors and dispute any inaccuracies\n6. **Consider becoming an authorized user** on someone else's well-established account\n7. **Use a secured credit card** if you're building credit from scratch\n\nRemember that improving your credit score takes time and consistency. There are no quick fixes, but with patience and good habits, you can see significant improvements."
+    },
+    {
+      "type": "complete",
+      "character": "cash",
+      "text": "Great job completing this lesson on credit scores! Understanding how credit scores work is a crucial step toward financial literacy. In our next lesson, we'll explore different types of loans and how to choose the right one for your needs."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "investra",
+    "title": "Estate Planning",
+    "content": "Welcome to our final lesson in Retirement Planning! I'm Investra, and today we'll explore estate planning—the process of arranging for the management and disposal of your assets during your lifetime and after death. Proper estate planning ensures your wishes are carried out and can minimize stress for your loved ones."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Essential Estate Planning Documents",
+    "content": "Several key documents form the foundation of a solid estate plan: A will (directs the distribution of assets and names guardians for minor children); Durable power of attorney (designates someone to handle your finances if you're incapacitated); Healthcare power of attorney (appoints someone to make medical decisions if you cannot); Living will/advance directive (specifies your wishes for end-of-life care); and potentially trusts (legal arrangements that can provide more control over asset distribution and may avoid probate). These documents should be reviewed and updated periodically, especially after major life events."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Probate and Ways to Avoid It",
+    "content": "Probate is the court-supervised process of validating a will and distributing assets. It can be time-consuming, expensive, and public. Several strategies can help assets bypass probate: Beneficiary designations on retirement accounts, life insurance, and financial accounts; Joint ownership with right of survivorship; Transfer-on-death (TOD) or payable-on-death (POD) designations for bank and investment accounts; and Revocable living trusts, which hold assets during your lifetime and transfer them to beneficiaries upon death without court involvement."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Estate Taxes",
+    "content": "Federal estate taxes affect only very wealthy individuals, with exemptions of $12.92 million per person in 2023 (scheduled to decrease to approximately $6 million in 2026 unless Congress acts). However, some states impose their own estate or inheritance taxes with lower thresholds. For those with taxable estates, strategies to minimize taxes include: Annual gifting ($17,000 per recipient in 2023 without using exemption); Charitable giving; Irrevocable life insurance trusts; and Various other trust structures. Consult with an estate planning attorney and tax professional to determine if tax planning is necessary for your situation."
+  },
+  {
+    "type": "quiz",
+    "character": "investra",
+    "title": "Quick Check",
+    "content": "Which of the following is NOT typically a way to avoid probate?",
+    "options": [
+      {
+        "text": "Naming beneficiaries on retirement accounts",
+        "correct": false,
+        "feedback": "Naming beneficiaries on retirement accounts allows these assets to pass directly to beneficiaries without going through probate."
+      },
+      {
+        "text": "Creating a detailed will",
+        "correct": true,
+        "feedback": "Correct! A will must go through the probate process to be validated and executed. While a will is an essential document, it does not avoid probate—in fact, it guides the probate process."
+      },
+      {
+        "text": "Establishing a revocable living trust",
+        "correct": false,
+        "feedback": "Revocable living trusts are specifically designed to avoid probate by transferring assets to beneficiaries outside of the court system."
+      },
+      {
+        "text": "Setting up payable-on-death designations for bank accounts",
+        "correct": false,
+        "feedback": "Payable-on-death (POD) designations allow bank accounts to pass directly to named beneficiaries without going through probate."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Digital Estate Planning",
+    "content": "In today's digital world, planning for your digital assets is increasingly important. Digital assets include: Online financial accounts, email accounts, social media profiles, digital photos and files, cryptocurrency, and online businesses or websites. Create an inventory of your digital assets, document how to access them (consider a password manager), and specify your wishes for each. Some platforms offer legacy contact options or inactive account managers. Without proper planning, your digital assets may be lost or inaccessible to your heirs."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Legacy Planning Beyond Money",
+    "content": "Estate planning isn't just about financial assets—it's also about your values, wisdom, and personal legacy. Consider creating an ethical will (a non-legal document sharing your values, life lessons, and wishes for future generations), recording or writing your life story, establishing a charitable foundation or donor-advised fund, or creating specific bequests that reflect your passions and values. These elements add a meaningful dimension to your estate plan that goes beyond the transfer of wealth."
+  },
+  {
+    "type": "interactive",
+    "character": "investra",
+    "title": "Estate Planning Checklist",
+    "content": "Let's create a personalized estate planning checklist based on your family situation, assets, and goals. We'll identify which documents you need, potential probate-avoidance strategies, and next steps to implement or update your estate plan."
+  },
+  {
+    "type": "application",
+    "character": "investra",
+    "title": "Real-World Application",
+    "content": "Take inventory of your assets, including financial accounts, real estate, personal property, and digital assets. Check the beneficiary designations on your retirement accounts, life insurance policies, and financial accounts to ensure they reflect your current wishes. If you don't have basic estate planning documents (will, powers of attorney, advance directive), schedule a consultation with an estate planning attorney. If you do have these documents, review them to ensure they're up to date, especially if you've experienced major life changes like marriage, divorce, births, or relocations to a different state."
+  },
+  {
+    "type": "complete",
+    "character": "investra",
+    "title": "Module Complete!",
+    "content": "Congratulations! You've completed the entire Retirement Planning module. You now understand retirement planning basics, retirement accounts, investment strategies, income planning, healthcare considerations, and estate planning. This comprehensive knowledge will help you prepare for a financially secure retirement that aligns with your values and goals. Remember that retirement planning is an ongoing process—revisit these topics regularly and adjust your strategy as your life and circumstances evolve."
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "steps": [
+    {
+      "type": "intro",
+      "character": "cash",
+      "text": "Welcome to our lesson on Student Loans! Today we'll explore how student loans work, the different types available, and strategies for managing education debt effectively."
+    },
+    {
+      "type": "content",
+      "title": "What are Student Loans?",
+      "content": "Student loans are specialized financial products designed to help students pay for post-secondary education expenses, including tuition, books, supplies, and living expenses. Unlike scholarships and grants, student loans must be repaid, typically with interest.\n\nIn the United States, student loans have become a significant part of financing higher education, with over 43 million Americans holding student loan debt totaling more than $1.75 trillion."
+    },
+    {
+      "type": "content",
+      "title": "Federal vs. Private Student Loans",
+      "content": "There are two main categories of student loans:\n\n**Federal Student Loans**:\n- Funded by the federal government\n- Generally have lower, fixed interest rates\n- Offer income-driven repayment plans\n- Provide loan forgiveness options\n- Don't require credit checks (except for PLUS loans)\n- Offer deferment and forbearance options\n\n**Private Student Loans**:\n- Issued by banks, credit unions, or online lenders\n- Interest rates may be fixed or variable\n- Usually require credit checks and often a co-signer\n- Fewer repayment flexibility options\n- Limited or no forgiveness programs\n- May offer higher loan limits"
+    },
+    {
+      "type": "quiz",
+      "question": "Which type of student loan typically offers more flexible repayment options?",
+      "options": [
+        "Private student loans",
+        "Federal student loans",
+        "Both offer the same options",
+        "Neither offers flexible options"
+      ],
+      "correctIndex": 1,
+      "feedback": {
+        "correct": "That's right! Federal student loans typically offer more flexible repayment options, including income-driven repayment plans, deferment, forbearance, and potential loan forgiveness.",
+        "incorrect": "Not quite. Federal student loans typically offer more flexible repayment options, including income-driven repayment plans, deferment, forbearance, and potential loan forgiveness."
+      }
+    },
+    {
+      "type": "content",
+      "title": "Types of Federal Student Loans",
+      "content": "The U.S. Department of Education offers several types of federal student loans:\n\n1. **Direct Subsidized Loans**: For undergraduate students with financial need. The government pays the interest while you're in school.\n\n2. **Direct Unsubsidized Loans**: For undergraduate and graduate students regardless of financial need. Interest accrues while you're in school.\n\n3. **Direct PLUS Loans**: For graduate students and parents of dependent undergraduate students. Requires credit check.\n\n4. **Direct Consolidation Loans**: Allows you to combine multiple federal student loans into a single loan with a fixed interest rate."
+    },
+    {
+      "type": "interactive",
+      "title": "Student Loan Repayment Calculator",
+      "description": "See how different loan amounts and repayment plans affect your monthly payments and total cost.",
+      "interactionType": "calculator",
+      "data": {
+        "loanAmount": 30000,
+        "interestRate": 5.05,
+        "loanTerm": 120,
+        "result": "Standard 10-year plan:\nMonthly payment: $318.71\nTotal interest paid: $8,245.20\nTotal amount paid: $38,245.20\n\nIncome-Based (assuming $45,000 salary):\nInitial monthly payment: $226.88\nRepayment period: 20 years\nTotal amount paid: $54,451.20"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Student Loan Repayment Plans",
+      "content": "Federal student loans offer various repayment plans:\n\n1. **Standard Repayment Plan**: Fixed payments over 10 years\n\n2. **Graduated Repayment Plan**: Payments start low and increase every two years\n\n3. **Extended Repayment Plan**: Lower monthly payments over 25 years\n\n4. **Income-Driven Repayment Plans**:\n   - **Income-Based Repayment (IBR)**\n   - **Pay As You Earn (PAYE)**\n   - **Revised Pay As You Earn (REPAYE)**\n   - **Income-Contingent Repayment (ICR)**\n\nThese income-driven plans set your monthly payment at a percentage of your discretionary income and extend the repayment period to 20 or 25 years, with potential forgiveness of remaining balances."
+    },
+    {
+      "type": "quiz",
+      "question": "What happens to the interest on Direct Subsidized Loans while you're in school?",
+      "options": [
+        "It accrues and is added to your principal balance",
+        "It accrues but is forgiven when you graduate",
+        "The government pays the interest for you",
+        "You must pay the interest monthly"
+      ],
+      "correctIndex": 2,
+      "feedback": {
+        "correct": "Correct! With Direct Subsidized Loans, the government pays the interest while you're in school at least half-time, during the grace period, and during deferment periods.",
+        "incorrect": "Incorrect. With Direct Subsidized Loans, the government pays the interest while you're in school at least half-time, during the grace period, and during deferment periods."
+      }
+    },
+    {
+      "type": "application",
+      "title": "Strategies for Managing Student Loan Debt",
+      "content": "Here are effective strategies for managing your student loan debt:\n\n1. **Understand Your Loans**: Know your loan types, interest rates, and repayment terms\n\n2. **Choose the Right Repayment Plan**: Select a plan that fits your financial situation\n\n3. **Pay More Than the Minimum**: Even small extra payments can significantly reduce total interest\n\n4. **Consider Refinancing**: May lower your interest rate if you have good credit\n\n5. **Explore Loan Forgiveness Programs**:\n   - Public Service Loan Forgiveness (PSLF)\n   - Teacher Loan Forgiveness\n   - Income-driven repayment forgiveness\n\n6. **Use Tax Benefits**: Deduct up to $2,500 in student loan interest annually\n\n7. **Avoid Default**: If struggling, contact your loan servicer about deferment or forbearance options\n\n8. **Automate Payments**: Many servicers offer interest rate discounts for automatic payments\n\nRemember that student loan debt is often considered 'good debt' because it's an investment in your future earning potential, but it still requires careful management."
+    },
+    {
+      "type": "complete",
+      "character": "cash",
+      "text": "Great job completing this lesson on student loans! You now understand the different types of student loans, repayment options, and strategies for managing education debt effectively. Remember, the key to successful student loan management is staying informed and proactive about your options. In our next lesson, we'll explore investing basics and how to start building wealth for your future."
+    }
+  ]
+}
