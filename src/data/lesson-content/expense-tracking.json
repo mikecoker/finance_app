@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "cash",
+    "title": "Tracking Your Spending",
+    "content": "Welcome to our second lesson on Budgeting! I'm Cash, and today we'll focus on one of the most important aspects of successful budgeting: tracking your spending. Understanding where your money goes is essential for making informed financial decisions."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Why Track Your Spending?",
+    "content": "Tracking your spending reveals your actual financial habits, often highlighting patterns you weren't aware of. It helps identify areas where you might be overspending, ensures you're sticking to your budget, prevents impulse purchases, and provides data for refining your budget over time. Many people are surprised to discover how much they spend in certain categories once they start tracking."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Methods for Tracking Expenses",
+    "content": "Several methods can help you track expenses: Paper and pencil (simple but requires discipline), spreadsheets (customizable and calculation-friendly), budgeting apps (automated categorization and real-time updates), banking apps (convenient if you use cards for most purchases), or receipt collection (helpful for cash purchases). Choose the method that fits your lifestyle and that you'll maintain consistently."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Categorizing Your Expenses",
+    "content": "Organizing expenses into categories makes your spending patterns clearer. Common categories include: Housing (rent/mortgage, utilities, maintenance), Transportation (car payments, gas, public transit), Food (groceries, dining out), Healthcare, Entertainment, Personal care, Debt payments, Savings, and Miscellaneous. You can create subcategories for more detailed tracking, such as separating groceries from restaurant meals."
+  },
+  {
+    "type": "quiz",
+    "character": "cash",
+    "title": "Quick Check",
+    "content": "Which of the following is NOT a benefit of tracking your expenses?",
+    "options": [
+      {
+        "text": "Identifying spending patterns",
+        "correct": false,
+        "feedback": "Tracking expenses helps reveal patterns in your spending, which is valuable for budgeting effectively."
+      },
+      {
+        "text": "Increasing your income",
+        "correct": true,
+        "feedback": "Correct! While tracking expenses helps manage your spending and potentially save more, it doesn't directly increase your income. That requires other strategies like negotiating a raise or finding additional income sources."
+      },
+      {
+        "text": "Ensuring budget compliance",
+        "correct": false,
+        "feedback": "Tracking expenses is essential for ensuring you're sticking to your budget plan."
+      },
+      {
+        "text": "Reducing impulse purchases",
+        "correct": false,
+        "feedback": "When you track expenses, you become more conscious of your spending, which often reduces impulse buying."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Analyzing Your Spending Data",
+    "content": "Regular analysis of your spending data helps you refine your budget. Look for: Categories where you consistently overspend, unexpected expenses that might need their own category, seasonal spending patterns, and opportunities to reduce spending. Compare your actual spending to your budgeted amounts and adjust as needed. Many budgeting apps provide visual reports to make this analysis easier."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Making Adjustments",
+    "content": "Based on your spending analysis, make adjustments to your budget. If you consistently overspend in certain categories, either increase the budget allocation (by decreasing elsewhere) or find ways to reduce spending in those areas. If you find you've been unrealistic about certain expenses, update your budget to reflect reality. Remember, a budget is a living document that evolves as your financial situation and goals change."
+  },
+  {
+    "type": "interactive",
+    "character": "cash",
+    "title": "Expense Tracker",
+    "content": "Let's practice categorizing expenses and analyzing spending patterns. We'll review a sample month of transactions and identify areas of potential savings and budget adjustments."
+  },
+  {
+    "type": "application",
+    "character": "cash",
+    "title": "Real-World Application",
+    "content": "Choose a method for tracking your expenses and commit to recording all your spending for the next 30 days. Set reminders to update your tracking system daily or weekly. At the end of the month, analyze your spending patterns and compare them to your budget. Identify at least three specific adjustments you could make to better align your spending with your financial goals."
+  },
+  {
+    "type": "complete",
+    "character": "cash",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the lesson on tracking your spending. You now understand the importance of expense tracking, various methods to do it effectively, and how to use the data to refine your budget. Consistent tracking is one of the most powerful habits for financial success. In the next lesson, we'll explore setting and achieving financial goals."
+  }
+]

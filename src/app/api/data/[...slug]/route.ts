@@ -8,9 +8,11 @@ export async function GET(
 ) {
   try {
     const slug = params.slug || [];
-    const filePath = path.join(process.cwd(), 'src', 'data', ...slug);
+    // Look for files in the public directory instead of src/data
+    const filePath = path.join(process.cwd(), 'public', 'data', ...slug);
     
     if (!fs.existsSync(filePath)) {
+      console.error(`File not found: ${filePath}`);
       return NextResponse.json(
         { error: 'File not found' },
         { status: 404 }

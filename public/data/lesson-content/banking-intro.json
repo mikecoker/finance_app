@@ -1,0 +1,66 @@
+[
+  {
+    "type": "intro",
+    "character": "cash",
+    "title": "Introduction to Banking",
+    "content": "Welcome to your first lesson on Banking Fundamentals! I'm Cash, and I'll be your guide as we explore how banks work and why they're important for your financial life."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "What is a Bank?",
+    "content": "A bank is a financial institution that accepts deposits, provides loans, and offers various financial services. Banks play a crucial role in the economy by safely storing money, facilitating payments, and helping money flow through the economy."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "How Banks Make Money",
+    "content": "Banks primarily make money through interest on loans. They pay you a small interest rate on your deposits (like 1%) and then lend that money to others at a higher rate (like 5%). The difference, called the spread, is how banks generate profit."
+  },
+  {
+    "type": "quiz",
+    "character": "cash",
+    "title": "Quick Check",
+    "content": "What is the main way banks make money?",
+    "options": [
+      {
+        "text": "Charging monthly account fees",
+        "correct": false,
+        "feedback": "While banks do charge fees, this isn't their primary source of income."
+      },
+      {
+        "text": "Interest on loans",
+        "correct": true,
+        "feedback": "Correct! Banks make most of their money from the interest spread between what they pay depositors and what they charge borrowers."
+      },
+      {
+        "text": "Investing in the stock market",
+        "correct": false,
+        "feedback": "Banks do invest, but this isn't their main business model."
+      },
+      {
+        "text": "ATM withdrawal fees",
+        "correct": false,
+        "feedback": "Fees are a revenue source, but they're secondary to interest income."
+      }
+    ]
+  },
+  {
+    "type": "interactive",
+    "character": "cash",
+    "title": "Banking Cycle Simulation",
+    "content": "Let's see how money flows through the banking system. In this simulation, you'll deposit money, the bank will lend it out, and you'll see how everyone benefits."
+  },
+  {
+    "type": "application",
+    "character": "cash",
+    "title": "Real-World Application",
+    "content": "Now that you understand how banks work, let's think about your own banking relationship. Consider what type of account might be best for your needs and what features would be most important to you."
+  },
+  {
+    "type": "complete",
+    "character": "cash",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the introduction to banking. You now understand the basic function of banks and how they make money. In the next lesson, we'll explore different types of bank accounts."
+  }
+]

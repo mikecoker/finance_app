@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "cash",
+    "title": "Understanding Banking Fees",
+    "content": "Welcome to our lesson on Understanding Banking Fees! I'm Cash, and today we'll explore the various fees banks charge, why they exist, and most importantly, how you can avoid or minimize them."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Common Banking Fees",
+    "content": "Banks charge various fees to generate revenue and cover their operational costs. The most common fees include monthly maintenance fees, overdraft fees, ATM fees, wire transfer fees, and foreign transaction fees. Being aware of these fees is the first step to managing them effectively."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Monthly Maintenance Fees",
+    "content": "Many checking accounts charge a monthly maintenance fee, typically ranging from $5 to $15. These fees help banks cover the cost of maintaining your account and providing services. However, most banks offer ways to waive these fees, such as maintaining a minimum balance, setting up direct deposit, or making a certain number of transactions each month."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Overdraft Fees",
+    "content": "Overdraft fees occur when you spend more money than you have in your account. These fees can be substantial, often $35 or more per transaction. To avoid overdraft fees, you can opt out of overdraft protection, link your checking account to a savings account for backup funds, or use mobile banking to regularly monitor your balance."
+  },
+  {
+    "type": "quiz",
+    "character": "cash",
+    "title": "Quick Check",
+    "content": "Which of the following is typically the most expensive banking fee?",
+    "options": [
+      {
+        "text": "Monthly maintenance fee",
+        "correct": false,
+        "feedback": "While monthly maintenance fees add up over time, they're usually not the most expensive single fee."
+      },
+      {
+        "text": "ATM withdrawal fee",
+        "correct": false,
+        "feedback": "ATM fees can be annoying, but they're typically lower than some other banking fees."
+      },
+      {
+        "text": "Overdraft fee",
+        "correct": true,
+        "feedback": "Correct! Overdraft fees are typically the most expensive, often $35 or more per transaction, and can quickly accumulate if multiple transactions occur while your account is overdrawn."
+      },
+      {
+        "text": "Paper statement fee",
+        "correct": false,
+        "feedback": "Paper statement fees are usually quite small, typically $1-3 per month."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "ATM Fees",
+    "content": "Using an ATM outside your bank's network often results in two fees: one from your bank and one from the ATM owner. These can add up to $5 or more per transaction. To avoid ATM fees, use your bank's ATMs, get cash back when making purchases at stores, or find a bank that reimburses ATM fees."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Other Common Fees",
+    "content": "Other fees to be aware of include wire transfer fees ($15-50), foreign transaction fees (1-3% of the transaction amount), paper statement fees ($1-3 per month), and early account closure fees ($25-50 if you close your account within a few months of opening it)."
+  },
+  {
+    "type": "interactive",
+    "character": "cash",
+    "title": "Fee Calculator",
+    "content": "Let's calculate how much you could save by avoiding common banking fees. We'll look at potential annual savings from eliminating monthly maintenance fees, overdraft fees, and ATM fees."
+  },
+  {
+    "type": "application",
+    "character": "cash",
+    "title": "Real-World Application",
+    "content": "Take a moment to review your own bank statements from the past few months. Identify any fees you've been charged and consider whether you could avoid them by changing your banking habits or switching to a different account type or bank."
+  },
+  {
+    "type": "complete",
+    "character": "cash",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the lesson on banking fees. You now understand the common fees banks charge and strategies to avoid them. Being fee-savvy can save you hundreds of dollars each year. In the next lesson, we'll explore online and mobile banking tools."
+  }
+]

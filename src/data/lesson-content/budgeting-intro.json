@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "cash",
+    "title": "Budgeting Basics",
+    "content": "Welcome to our first lesson on Budgeting Basics! I'm Cash, and today we'll explore the foundation of financial success: creating and maintaining a personal budget. A budget is simply a plan for your money that helps you achieve your financial goals."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "What is a Budget?",
+    "content": "A budget is a financial plan that tracks your income and expenses over a specific period, typically monthly. It's not about restricting your spending, but rather about understanding where your money goes and making intentional decisions that align with your priorities and goals. Think of it as a roadmap for your money."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Benefits of Budgeting",
+    "content": "Budgeting offers numerous benefits: it helps you live within your means, reduce financial stress, prepare for emergencies, pay down debt, save for future goals, and make informed spending decisions. Even if you have a high income, budgeting ensures your money is working toward what matters most to you."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Creating Your First Budget",
+    "content": "Creating a budget involves four main steps: 1) Calculate your total monthly income from all sources, 2) Track all your expenses for a month to understand your spending patterns, 3) Categorize your expenses (needs, wants, savings), and 4) Allocate specific amounts to each category based on your goals and priorities."
+  },
+  {
+    "type": "quiz",
+    "character": "cash",
+    "title": "Quick Check",
+    "content": "Which of the following is NOT a typical step in creating a budget?",
+    "options": [
+      {
+        "text": "Calculating your monthly income",
+        "correct": false,
+        "feedback": "Calculating your total monthly income is an essential first step in creating a budget."
+      },
+      {
+        "text": "Tracking your expenses",
+        "correct": false,
+        "feedback": "Tracking expenses is crucial for understanding your spending patterns and creating a realistic budget."
+      },
+      {
+        "text": "Maximizing credit card usage",
+        "correct": true,
+        "feedback": "Correct! While budgeting involves managing income, expenses, and savings, maximizing credit card usage is not a typical budgeting step and could lead to debt problems."
+      },
+      {
+        "text": "Setting financial goals",
+        "correct": false,
+        "feedback": "Setting financial goals is an important part of budgeting as it helps direct your spending and saving decisions."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Popular Budgeting Methods",
+    "content": "Several budgeting methods can help you manage your money: The 50/30/20 rule (50% needs, 30% wants, 20% savings), Zero-based budgeting (every dollar has a job), Envelope system (cash in physical or digital envelopes for different categories), and Pay-yourself-first (prioritize savings before spending). Choose the method that best fits your personality and financial situation."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Budgeting Tools",
+    "content": "Various tools can simplify budgeting: Spreadsheets (Excel, Google Sheets), Budgeting apps (Mint, YNAB, Personal Capital), Banking apps with budgeting features, or even pen and paper. The best tool is the one you'll actually use consistently. Many tools can automatically categorize transactions and provide visual reports of your spending."
+  },
+  {
+    "type": "interactive",
+    "character": "cash",
+    "title": "Budget Calculator",
+    "content": "Let's create a simple monthly budget together. We'll input your income sources and estimate your expenses across different categories to see how your money could be allocated effectively."
+  },
+  {
+    "type": "application",
+    "character": "cash",
+    "title": "Real-World Application",
+    "content": "Take some time to gather your financial information: recent pay stubs, bank statements, credit card statements, and bills. Start tracking your expenses for the next month, either manually or using a budgeting app. Identify areas where you might be overspending and consider where you could make adjustments."
+  },
+  {
+    "type": "complete",
+    "character": "cash",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the introduction to budgeting. You now understand what a budget is, its benefits, how to create one, and the various methods and tools available. In the next lesson, we'll explore how to track your spending effectively and make adjustments to your budget over time."
+  }
+]

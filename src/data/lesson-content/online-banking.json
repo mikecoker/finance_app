@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "cash",
+    "title": "Online and Mobile Banking",
+    "content": "Welcome to our lesson on Online and Mobile Banking! I'm Cash, and today we'll explore the digital tools that have revolutionized how we interact with our money. These technologies make banking more convenient, accessible, and often more secure."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Benefits of Digital Banking",
+    "content": "Online and mobile banking offer numerous advantages over traditional branch banking. You can access your accounts 24/7 from anywhere with an internet connection, transfer money instantly, deposit checks remotely, pay bills automatically, and receive real-time alerts about your account activity. This convenience saves you time and helps you stay on top of your finances."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Online Banking Features",
+    "content": "Online banking through your bank's website typically offers comprehensive account management. You can view transactions, transfer funds between accounts, set up automatic payments, download statements, and manage account settings. Many banks also offer budgeting tools, spending analyzers, and goal-setting features to help you manage your money more effectively."
+  },
+  {
+    "type": "content",
+    "character": "securio",
+    "title": "Mobile Banking Apps",
+    "content": "Mobile banking apps offer most online banking features in a smartphone-friendly format, plus additional capabilities like mobile check deposit (taking a photo of a check to deposit it), cardless ATM access, and location-based services to find nearby branches or ATMs. Some apps also include biometric authentication (fingerprint or face recognition) for enhanced security."
+  },
+  {
+    "type": "quiz",
+    "character": "cash",
+    "title": "Quick Check",
+    "content": "Which of the following is NOT typically a feature of mobile banking apps?",
+    "options": [
+      {
+        "text": "Mobile check deposit",
+        "correct": false,
+        "feedback": "Mobile check deposit is a standard feature in most banking apps, allowing you to deposit checks by taking photos with your smartphone."
+      },
+      {
+        "text": "Instant loan approval",
+        "correct": true,
+        "feedback": "Correct! While some banks offer loan applications through their apps, instant approval typically requires additional verification and is not a standard feature."
+      },
+      {
+        "text": "Account balance checking",
+        "correct": false,
+        "feedback": "Checking your account balance is one of the most basic and universal features of mobile banking apps."
+      },
+      {
+        "text": "Bill payment",
+        "correct": false,
+        "feedback": "Bill payment is a common feature in mobile banking apps, allowing you to pay bills directly from your account."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "securio",
+    "title": "Digital Banking Security",
+    "content": "Banks employ multiple security measures to protect your digital banking activities, including encryption, multi-factor authentication, automatic logout, and fraud monitoring systems. However, you also play a crucial role in keeping your accounts secure by using strong, unique passwords, enabling notifications for account activities, avoiding public Wi-Fi for banking, and keeping your devices and apps updated."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Payment Apps and Services",
+    "content": "Beyond your bank's own tools, various payment apps and services integrate with your bank accounts to offer additional functionality. Services like PayPal, Venmo, Zelle, and Cash App allow for peer-to-peer payments. Digital wallets like Apple Pay, Google Pay, and Samsung Pay let you make contactless payments in stores using your smartphone."
+  },
+  {
+    "type": "interactive",
+    "character": "cash",
+    "title": "Digital Banking Simulator",
+    "content": "Let's explore a simulated mobile banking app interface. Try navigating through different features like checking your balance, transferring money between accounts, depositing a check, and setting up account alerts."
+  },
+  {
+    "type": "application",
+    "character": "cash",
+    "title": "Real-World Application",
+    "content": "Take a moment to review the digital banking tools offered by your bank. Are you taking full advantage of these features? Consider setting up automatic bill payments for recurring expenses, enabling account alerts for large transactions, and exploring budgeting tools that might be available through your bank's online platform."
+  },
+  {
+    "type": "complete",
+    "character": "cash",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the lesson on online and mobile banking. You now understand the various digital tools available for managing your finances more efficiently and securely. In the next lesson, we'll explore banking security measures to help you protect your financial information."
+  }
+]

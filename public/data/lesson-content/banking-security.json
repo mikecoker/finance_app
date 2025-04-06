@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "securio",
+    "title": "Banking Security",
+    "content": "Welcome to our lesson on Banking Security! I'm Securio, your guide to financial security. Today we'll explore how to protect your banking information and accounts from various threats. Understanding security measures is essential for maintaining the safety of your hard-earned money."
+  },
+  {
+    "type": "content",
+    "character": "securio",
+    "title": "Common Banking Security Threats",
+    "content": "Several threats target your banking information, including phishing (fraudulent emails or messages that appear to be from your bank), identity theft, card skimming (devices placed on ATMs to steal card information), and malware that can capture your login credentials. Being aware of these threats is the first step in protecting yourself."
+  },
+  {
+    "type": "content",
+    "character": "securio",
+    "title": "Password Security",
+    "content": "Strong passwords are your first line of defense. Create unique passwords for each financial account using a mix of uppercase and lowercase letters, numbers, and special characters. Avoid using easily guessable information like birthdays or names. Consider using a password manager to securely store your complex passwords. Enable multi-factor authentication whenever possible, which requires both your password and a second verification method like a text code."
+  },
+  {
+    "type": "content",
+    "character": "securio",
+    "title": "Secure Online Banking Practices",
+    "content": "When banking online, always verify you're on the legitimate bank website by checking the URL (it should start with https:// and show a padlock icon). Never access your bank account on public Wi-Fi networks without using a VPN. Log out completely after each session and set up account alerts to notify you of unusual activity. Regularly monitor your accounts for unauthorized transactions."
+  },
+  {
+    "type": "quiz",
+    "character": "securio",
+    "title": "Quick Check",
+    "content": "Which of the following is the best practice for banking security?",
+    "options": [
+      {
+        "text": "Using the same password for all financial accounts to avoid forgetting them",
+        "correct": false,
+        "feedback": "Using the same password across multiple accounts is risky. If one account is compromised, all your accounts become vulnerable."
+      },
+      {
+        "text": "Writing down your passwords and PIN numbers in your wallet for easy access",
+        "correct": false,
+        "feedback": "Storing passwords in your wallet creates a significant security risk if your wallet is lost or stolen."
+      },
+      {
+        "text": "Enabling multi-factor authentication on all financial accounts",
+        "correct": true,
+        "feedback": "Correct! Multi-factor authentication adds an essential layer of security by requiring something you know (password) and something you have (like your phone for verification codes)."
+      },
+      {
+        "text": "Sharing your account details with family members so they can help monitor for fraud",
+        "correct": false,
+        "feedback": "Sharing account details, even with family, increases security risks. Instead, use account features designed for family access if needed."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "securio",
+    "title": "Physical Security Measures",
+    "content": "Protect your physical banking items too. Shield the keypad when entering your PIN at ATMs or stores. Regularly check ATMs for unusual attachments or skimming devices. Keep your debit and credit cards in sight during transactions. Shred financial documents before discarding them. Report lost or stolen cards immediately to your bank."
+  },
+  {
+    "type": "content",
+    "character": "securio",
+    "title": "Responding to Security Breaches",
+    "content": "If you suspect your account has been compromised, act quickly. Contact your bank immediately through their official phone number (not through links in emails). Change your passwords, review recent transactions, and consider placing a fraud alert or credit freeze with credit bureaus. Monitor your credit reports regularly for unauthorized accounts or inquiries."
+  },
+  {
+    "type": "interactive",
+    "character": "securio",
+    "title": "Security Assessment",
+    "content": "Let's evaluate your current banking security practices. We'll review common security measures and identify areas where you might improve your protection against financial fraud and identity theft."
+  },
+  {
+    "type": "application",
+    "character": "securio",
+    "title": "Real-World Application",
+    "content": "Take a moment to review your own banking security practices. Are you using strong, unique passwords? Have you enabled multi-factor authentication? Are you regularly monitoring your accounts? Consider creating a security checklist to ensure you're following best practices for all your financial accounts."
+  },
+  {
+    "type": "complete",
+    "character": "securio",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the lesson on banking security. You now understand the various threats to your financial information and the steps you can take to protect yourself. Remember, staying vigilant and following security best practices is essential for keeping your money safe. You've now completed all the lessons in the Banking Fundamentals module!"
+  }
+]
