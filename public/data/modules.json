@@ -45,7 +45,7 @@
     "completedLessons": 0,
     "xpReward": 400,
     "prerequisites": ["banking-fundamentals", "budgeting-basics"],
-    "unlocked": false
+    "unlocked": true
   },
   {
     "id": "tax-essentials",
@@ -57,7 +57,7 @@
     "completedLessons": 0,
     "xpReward": 350,
     "prerequisites": ["banking-fundamentals"],
-    "unlocked": false
+    "unlocked": true
   },
   {
     "id": "retirement-planning",
@@ -69,6 +69,6 @@
     "completedLessons": 0,
     "xpReward": 450,
     "prerequisites": ["investing-basics"],
-    "unlocked": false
+    "unlocked": true
   }
 ]
