@@ -1,0 +1,81 @@
+{
+  "steps": [
+    {
+      "type": "intro",
+      "character": "cash",
+      "text": "Welcome to our lesson on Personal Loans! Today we'll explore what personal loans are, how they work, and when they might be a good financial option for you."
+    },
+    {
+      "type": "content",
+      "title": "What is a Personal Loan?",
+      "content": "A personal loan is a fixed amount of money borrowed from a bank, credit union, or online lender that you repay in fixed monthly installments over a set period, typically 1-7 years. Unlike specific loans (like auto loans or mortgages), personal loans can be used for almost any purpose.\n\nPersonal loans are usually unsecured, meaning they don't require collateral like a house or car. Instead, approval is based primarily on your credit score, income, and existing debt."
+    },
+    {
+      "type": "content",
+      "title": "Key Features of Personal Loans",
+      "content": "Personal loans have several distinguishing characteristics:\n\n1. **Fixed Interest Rates**: Most personal loans have fixed rates, meaning your interest rate and monthly payment remain the same throughout the loan term\n\n2. **Fixed Repayment Period**: Typically 12-84 months (1-7 years)\n\n3. **Lump Sum Payment**: You receive the entire loan amount upfront\n\n4. **No Collateral Required**: Most personal loans are unsecured\n\n5. **Predictable Monthly Payments**: Fixed payments make budgeting easier\n\n6. **Various Loan Amounts**: Typically range from $1,000 to $50,000 (sometimes higher)"
+    },
+    {
+      "type": "quiz",
+      "question": "What is the main difference between secured and unsecured personal loans?",
+      "options": [
+        "Secured loans have lower interest rates",
+        "Unsecured loans require collateral",
+        "Secured loans require collateral",
+        "Unsecured loans can only be used for specific purposes"
+      ],
+      "correctIndex": 2,
+      "feedback": {
+        "correct": "That's right! Secured loans require collateral (like a car or savings account) that the lender can take if you don't repay the loan. Most personal loans are unsecured, meaning they don't require collateral.",
+        "incorrect": "Not quite. Secured loans require collateral (like a car or savings account) that the lender can take if you don't repay the loan. Most personal loans are unsecured, meaning they don't require collateral."
+      }
+    },
+    {
+      "type": "content",
+      "title": "Common Uses for Personal Loans",
+      "content": "People take out personal loans for many reasons, including:\n\n- **Debt Consolidation**: Combining multiple high-interest debts into a single loan with a lower rate\n- **Home Improvements**: Funding renovations or repairs\n- **Major Purchases**: Paying for large expenses like appliances or furniture\n- **Medical Bills**: Covering healthcare costs not covered by insurance\n- **Wedding Expenses**: Financing wedding costs\n- **Moving Costs**: Paying for relocation expenses\n- **Emergency Expenses**: Handling unexpected financial needs\n\nPersonal loans are versatile, but they're not always the best choice for every situation."
+    },
+    {
+      "type": "interactive",
+      "title": "Personal Loan Calculator",
+      "description": "See how different loan amounts, interest rates, and terms affect your monthly payment.",
+      "interactionType": "calculator",
+      "data": {
+        "loanAmount": 10000,
+        "interestRate": 8.5,
+        "loanTerm": 36,
+        "result": "Monthly payment: $315.30\nTotal interest paid: $1,350.80\nTotal amount paid: $11,350.80"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Pros and Cons of Personal Loans",
+      "content": "**Advantages:**\n- Lower interest rates than credit cards (typically)\n- Fixed monthly payments for easier budgeting\n- No collateral required for unsecured loans\n- Can help build credit history when paid on time\n- Versatile use of funds\n- Quick application and funding process\n\n**Disadvantages:**\n- Higher interest rates than secured loans like mortgages\n- Potential origination fees (1-8% of loan amount)\n- Possible prepayment penalties\n- Risk of debt cycle if used irresponsibly\n- Impact on credit score if payments are missed\n- May tempt overspending"
+    },
+    {
+      "type": "quiz",
+      "question": "When might a personal loan be a better option than a credit card?",
+      "options": [
+        "When you need to make many small purchases over time",
+        "When you need a large sum upfront and want predictable payments",
+        "When you're not sure how much money you'll need",
+        "When you want to build rewards points"
+      ],
+      "correctIndex": 1,
+      "feedback": {
+        "correct": "Correct! Personal loans are often better than credit cards when you need a large sum upfront and want predictable payments. The fixed interest rate and payment schedule make personal loans more suitable for planned, large expenses.",
+        "incorrect": "Not quite. Personal loans are often better than credit cards when you need a large sum upfront and want predictable payments. The fixed interest rate and payment schedule make personal loans more suitable for planned, large expenses."
+      }
+    },
+    {
+      "type": "application",
+      "title": "How to Get the Best Personal Loan",
+      "content": "Follow these steps to secure the best personal loan for your needs:\n\n1. **Check your credit score**: Higher scores qualify for better rates\n\n2. **Shop around**: Compare offers from multiple lenders (banks, credit unions, online lenders)\n\n3. **Consider prequalification**: Many lenders offer this without a hard credit check\n\n4. **Calculate the total cost**: Look at interest rates, fees, and loan terms\n\n5. **Read the fine print**: Check for prepayment penalties and late fees\n\n6. **Borrow only what you need**: Don't take more than necessary\n\n7. **Have a repayment plan**: Make sure the monthly payments fit your budget\n\n8. **Consider a co-signer**: If your credit isn't strong, a co-signer might help you qualify for better terms\n\nRemember that taking out a personal loan is a significant financial commitment. Only borrow what you can comfortably repay."
+    },
+    {
+      "type": "complete",
+      "character": "cash",
+      "text": "Great job completing this lesson on personal loans! You now understand what personal loans are, how they work, and when they might be appropriate for your financial situation. Remember, while personal loans can be useful financial tools, they should be used responsibly as part of a broader financial plan. In our next lesson, we'll explore student loans and strategies for managing education debt."
+    }
+  ]
+}

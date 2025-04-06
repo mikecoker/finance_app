@@ -1,0 +1,82 @@
+{
+  "steps": [
+    {
+      "type": "intro",
+      "character": "cash",
+      "text": "Welcome to our lesson on Investing Basics! Today we'll explore the fundamentals of investing, different investment options, and how to start building wealth for your future."
+    },
+    {
+      "type": "content",
+      "title": "What is Investing?",
+      "content": "Investing is the act of allocating resources, usually money, with the expectation of generating income or profit over time. Unlike saving, which focuses on preserving money, investing aims to grow your money by putting it to work.\n\nWhen you invest, you're essentially buying assets that you believe will increase in value over time or provide income. The goal is to have your money earn more money, helping you build wealth and achieve financial goals like retirement, buying a home, or funding education."
+    },
+    {
+      "type": "content",
+      "title": "Why Should You Invest?",
+      "content": "There are several compelling reasons to invest:\n\n1. **Beat Inflation**: Over time, inflation erodes the purchasing power of money. Investments typically grow at a rate that outpaces inflation, preserving and increasing your wealth.\n\n2. **Build Wealth**: Investing allows your money to grow through compound returns, where you earn returns not just on your initial investment but also on the returns you've already earned.\n\n3. **Achieve Financial Goals**: Whether it's retirement, buying a home, or funding education, investing can help you reach major financial milestones.\n\n4. **Generate Passive Income**: Some investments provide regular income without requiring active work.\n\n5. **Tax Advantages**: Many investment accounts offer tax benefits that can help you keep more of your returns."
+    },
+    {
+      "type": "quiz",
+      "question": "What is the main difference between saving and investing?",
+      "options": [
+        "Saving is for long-term goals, investing is for short-term goals",
+        "Saving focuses on preserving money, investing focuses on growing money",
+        "Saving involves risk, investing is risk-free",
+        "Saving is only done in banks, investing is only done in the stock market"
+      ],
+      "correctIndex": 1,
+      "feedback": {
+        "correct": "That's right! Saving focuses on preserving your money (typically in low-risk, easily accessible accounts), while investing focuses on growing your money by putting it to work in assets that can appreciate in value over time.",
+        "incorrect": "Not quite. Saving focuses on preserving your money (typically in low-risk, easily accessible accounts), while investing focuses on growing your money by putting it to work in assets that can appreciate in value over time."
+      }
+    },
+    {
+      "type": "content",
+      "title": "Common Investment Types",
+      "content": "There are many ways to invest your money. Here are some common investment types:\n\n1. **Stocks**: Ownership shares in a company. Stocks offer potential for high returns but come with higher risk and volatility.\n\n2. **Bonds**: Loans to a company or government that pay fixed interest. Bonds generally offer lower returns than stocks but with less risk.\n\n3. **Mutual Funds**: Professionally managed investment funds that pool money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities.\n\n4. **Exchange-Traded Funds (ETFs)**: Similar to mutual funds but traded like stocks on exchanges. ETFs often have lower fees than mutual funds.\n\n5. **Real Estate**: Property investments, either direct ownership or through Real Estate Investment Trusts (REITs).\n\n6. **Retirement Accounts**: Tax-advantaged accounts like 401(k)s and IRAs that can hold various investments.\n\n7. **Certificates of Deposit (CDs)**: Time deposits at banks that pay fixed interest rates for specific terms.\n\n8. **Index Funds**: Passive mutual funds or ETFs that track a specific market index, offering broad market exposure with low fees."
+    },
+    {
+      "type": "interactive",
+      "title": "The Power of Compound Interest",
+      "description": "See how your investments can grow over time through the power of compound interest.",
+      "interactionType": "calculator",
+      "data": {
+        "initialInvestment": 10000,
+        "monthlyContribution": 200,
+        "annualReturnRate": 7,
+        "years": 30,
+        "result": "After 30 years:\nTotal contributions: $82,000\nTotal value: $283,382\nGrowth from compound interest: $201,382"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Key Investment Concepts",
+      "content": "Understanding these concepts is essential for successful investing:\n\n1. **Risk and Return**: Generally, higher potential returns come with higher risk. Lower-risk investments typically offer lower returns.\n\n2. **Diversification**: Spreading investments across different asset types to reduce risk. \"Don't put all your eggs in one basket.\"\n\n3. **Asset Allocation**: The mix of different asset types (stocks, bonds, cash, etc.) in your portfolio based on your goals, time horizon, and risk tolerance.\n\n4. **Compound Interest**: The process where your investment returns generate their own returns over time, accelerating growth.\n\n5. **Dollar-Cost Averaging**: Investing a fixed amount regularly regardless of market conditions, which can reduce the impact of market volatility.\n\n6. **Time Horizon**: The length of time you plan to hold an investment before needing the money.\n\n7. **Risk Tolerance**: Your emotional and financial capacity to endure market fluctuations and potential losses."
+    },
+    {
+      "type": "quiz",
+      "question": "What is diversification in investing?",
+      "options": [
+        "Investing only in high-risk stocks for maximum returns",
+        "Spreading investments across different asset types to reduce risk",
+        "Changing your investment strategy frequently",
+        "Investing only in government bonds for safety"
+      ],
+      "correctIndex": 1,
+      "feedback": {
+        "correct": "Correct! Diversification means spreading your investments across different asset types, industries, and geographic regions to reduce risk. This strategy helps protect your portfolio from significant losses if one investment performs poorly.",
+        "incorrect": "Incorrect. Diversification means spreading your investments across different asset types, industries, and geographic regions to reduce risk. This strategy helps protect your portfolio from significant losses if one investment performs poorly."
+      }
+    },
+    {
+      "type": "application",
+      "title": "Getting Started with Investing",
+      "content": "Follow these steps to begin your investing journey:\n\n1. **Set Clear Financial Goals**: Define what you're investing for and your time horizon\n\n2. **Build an Emergency Fund First**: Have 3-6 months of expenses saved before investing\n\n3. **Pay Off High-Interest Debt**: Eliminate credit card debt and other high-interest loans\n\n4. **Understand Your Risk Tolerance**: Assess how comfortable you are with market fluctuations\n\n5. **Start with Retirement Accounts**: Take advantage of employer matches in 401(k) plans\n\n6. **Consider Low-Cost Index Funds**: These provide diversification and low fees for beginners\n\n7. **Set Up Automatic Contributions**: Establish regular, automatic investments\n\n8. **Keep Learning**: Continue educating yourself about investing strategies\n\n9. **Consider a Robo-Advisor**: Automated investment services can help beginners\n\n10. **Be Patient**: Investing is a long-term strategy; avoid reacting to short-term market movements\n\nRemember that investing involves risk, including the potential loss of principal. Start small, stay consistent, and focus on the long term."
+    },
+    {
+      "type": "complete",
+      "character": "cash",
+      "text": "Great job completing this lesson on investing basics! You now understand the fundamentals of investing, different investment options, and how to start building wealth for your future. Remember that investing is a journey, not a destination. The key is to start early, stay consistent, and let the power of compound interest work for you over time. In our next lesson, we'll explore retirement planning and how to prepare for your financial future."
+    }
+  ]
+}

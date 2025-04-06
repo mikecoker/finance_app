@@ -72,6 +72,25 @@ function CourseContent() {
     loadData();
   }, []);
   
+  // Initialize progress tracking for all modules (only once after data is loaded)
+  useEffect(() => {
+    if (!isLoading && modules.length > 0 && lessons.length > 0) {
+      // Use a flag in localStorage to ensure this only runs once
+      const progressInitialized = localStorage.getItem('finance_progress_initialized');
+      if (!progressInitialized) {
+        modules.forEach(module => {
+          const moduleLessons = lessons.filter(l => l.moduleId === module.id);
+          if (moduleLessons.length > 0) {
+            // Start the first lesson of each module to ensure the module appears in tracking
+            startLesson(module.id, moduleLessons[0].id);
+          }
+        });
+        // Set flag to prevent this from running again
+        localStorage.setItem('finance_progress_initialized', 'true');
+      }
+    }
+  }, [isLoading, modules, lessons, startLesson]);
+  
   // Load lesson content when a lesson is selected
   useEffect(() => {
     async function loadLessonContent() {
@@ -112,6 +131,13 @@ function CourseContent() {
         
         // Complete the lesson in the progress provider
         completeLesson(selectedModule, selectedLesson, 100, xpReward);
+        
+        // Start a new lesson in the progress provider if there's a next lesson
+        if (currentLessonIndex < lessons.length - 1) {
+          const nextLesson = lessons[currentLessonIndex + 1];
+          // Pre-start the next lesson to ensure it appears in progress tracking
+          startLesson(selectedModule, nextLesson.id);
+        }
         
         // Update local state
         const updatedLessons = [...lessons];
@@ -223,6 +249,8 @@ function CourseContent() {
                     onBackToModule={handleBackToModule}
                     onNextLesson={handleNextLesson}
                     lessonTitle={getCurrentLessonTitle()}
+                    moduleId={selectedModule || ''}
+                    lessonId={selectedLesson || ''}
                   />
                 )}
               </div>

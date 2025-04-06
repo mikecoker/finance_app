@@ -10,19 +10,24 @@ import {
   CharacterType
 } from '@/components/characters';
 import { LessonStep } from '@/services/dataService';
+import { useProgress } from '@/components/progress/ProgressProvider';
 
 interface StepByStepLessonProps {
   lessonContent: LessonStep[];
   onBackToModule: () => void;
   onNextLesson: () => void;
   lessonTitle: string;
+  moduleId?: string;
+  lessonId?: string;
 }
 
 export const StepByStepLesson: React.FC<StepByStepLessonProps> = ({ 
   lessonContent, 
   onBackToModule, 
   onNextLesson,
-  lessonTitle
+  lessonTitle,
+  moduleId,
+  lessonId
 }) => {
   // State management
   const [currentStep, setCurrentStep] = useState(0);
@@ -30,12 +35,42 @@ export const StepByStepLesson: React.FC<StepByStepLessonProps> = ({
   const [showFeedback, setShowFeedback] = useState(false);
   const [showReaction, setShowReaction] = useState(false);
   const [reactionEmotion, setReactionEmotion] = useState<'happy' | 'sad'>('happy');
+  const [currentLessonId, setCurrentLessonId] = useState<string>('');
+  
+  // Get progress tracking functions
+  const { updateLessonProgress } = useProgress();
+  
+  // Reset step counter ONLY when switching to a different lesson
+  useEffect(() => {
+    // Create a unique identifier for the current lesson
+    const lessonIdentifier = `${lessonTitle}-${lessonContent.length}`;
+    
+    // Only reset if we're switching to a different lesson
+    if (currentLessonId !== lessonIdentifier && currentLessonId !== '') {
+      setCurrentStep(0);
+      setSelectedOption(null);
+      setShowFeedback(false);
+    }
+    
+    // Update the current lesson identifier
+    setCurrentLessonId(lessonIdentifier);
+  }, [lessonContent, lessonTitle, currentLessonId]);
   
   const step = lessonContent[currentStep];
   
   // Event-based handlers
   const handleNextStep = () => {
-    if (currentStep < lessonContent.length - 1) {
+    if (moduleId && lessonId && currentStep < lessonContent.length - 1) {
+      // Calculate completion percentage based on current step
+      const completionPercentage = Math.round(((currentStep + 1) / lessonContent.length) * 100);
+      
+      // Update lesson progress in the progress tracking system
+      updateLessonProgress(moduleId, lessonId, {
+        completionPercentage,
+        status: 'in_progress'
+      });
+      
+      // Move to next step
       setCurrentStep(currentStep + 1);
       setSelectedOption(null);
       setShowFeedback(false);

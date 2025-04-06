@@ -1,0 +1,86 @@
+{
+  "steps": [
+    {
+      "type": "intro",
+      "character": "cash",
+      "text": "Welcome to our lesson on Credit Cards! Today we'll learn about how credit cards work, their benefits, potential pitfalls, and how to use them responsibly."
+    },
+    {
+      "type": "content",
+      "title": "What is a Credit Card?",
+      "content": "A credit card is a payment card issued by a financial institution that lets you borrow money to pay for goods and services. Unlike a debit card, which immediately takes money from your bank account, a credit card allows you to borrow up to a certain limit and pay back the borrowed amount later.\n\nCredit cards operate on a revolving credit model, meaning you can repeatedly borrow up to your credit limit as long as you make minimum payments on what you've borrowed."
+    },
+    {
+      "type": "content",
+      "title": "How Credit Cards Work",
+      "content": "When you use a credit card, you're borrowing money from the card issuer. Here's the basic process:\n\n1. **Purchase**: You make a purchase using your credit card\n2. **Billing Cycle**: The purchase is added to your monthly statement\n3. **Grace Period**: You typically have 21-25 days to pay before interest is charged\n4. **Payment Options**: You can pay the full balance (avoiding interest) or make a minimum payment (accruing interest on the remaining balance)\n5. **Interest Charges**: If you don't pay in full, interest is applied to your remaining balance"
+    },
+    {
+      "type": "quiz",
+      "question": "What happens if you only make the minimum payment on your credit card?",
+      "options": [
+        "Nothing, as long as you make the minimum payment you won't be charged interest",
+        "You'll be charged interest only on new purchases",
+        "You'll be charged interest on the remaining balance",
+        "Your credit limit will be reduced"
+      ],
+      "correctIndex": 2,
+      "feedback": {
+        "correct": "That's right! When you only make the minimum payment, you'll be charged interest on the remaining balance, which can add up significantly over time.",
+        "incorrect": "Not quite. When you only make the minimum payment, you'll be charged interest on the remaining balance, which can add up significantly over time."
+      }
+    },
+    {
+      "type": "content",
+      "title": "Key Credit Card Terms",
+      "content": "Understanding these terms is essential for responsible credit card use:\n\n- **APR (Annual Percentage Rate)**: The yearly interest rate charged on outstanding balances\n- **Credit Limit**: The maximum amount you can borrow\n- **Minimum Payment**: The smallest amount you must pay each month\n- **Grace Period**: Time between purchase and when interest begins accruing\n- **Balance Transfer**: Moving debt from one card to another\n- **Cash Advance**: Borrowing cash against your credit limit (usually with higher fees and interest)\n- **Foreign Transaction Fee**: Fee for purchases made in foreign currencies"
+    },
+    {
+      "type": "interactive",
+      "title": "The Cost of Minimum Payments",
+      "description": "See how long it takes to pay off a credit card balance when making only minimum payments.",
+      "interactionType": "calculator",
+      "data": {
+        "initialBalance": 3000,
+        "interestRate": 18.99,
+        "minimumPayment": 90,
+        "result": "Time to pay off: 46 months (3.8 years)\nTotal interest paid: $1,145\nTotal amount paid: $4,145"
+      }
+    },
+    {
+      "type": "content",
+      "title": "Benefits of Credit Cards",
+      "content": "When used responsibly, credit cards offer several advantages:\n\n1. **Convenience**: Easy and secure payment method accepted worldwide\n2. **Build Credit History**: Helps establish and improve your credit score\n3. **Rewards**: Cash back, points, or miles on purchases\n4. **Consumer Protections**: Fraud protection, purchase protection, extended warranties\n5. **Emergency Funds**: Available credit for unexpected expenses\n6. **Travel Benefits**: Some cards offer travel insurance, no foreign transaction fees, airport lounge access\n7. **Tracking Expenses**: Detailed statements help monitor spending"
+    },
+    {
+      "type": "content",
+      "title": "Potential Pitfalls of Credit Cards",
+      "content": "Credit cards also come with risks if not managed properly:\n\n1. **High Interest Rates**: APRs typically range from 15% to 24% or higher\n2. **Debt Accumulation**: Easy to spend more than you can afford to repay\n3. **Fees**: Annual fees, late payment fees, cash advance fees, etc.\n4. **Credit Score Impact**: Missed payments can damage your credit score\n5. **Minimum Payment Trap**: Making only minimum payments leads to long-term debt\n6. **Impulse Spending**: May encourage unplanned purchases\n7. **Complex Terms**: Difficult-to-understand agreements and changing terms"
+    },
+    {
+      "type": "quiz",
+      "question": "Which of the following is NOT a typical benefit of credit cards?",
+      "options": [
+        "Building credit history",
+        "Earning rewards on purchases",
+        "Guaranteed low interest rates",
+        "Fraud protection"
+      ],
+      "correctIndex": 2,
+      "feedback": {
+        "correct": "Correct! Credit cards do not guarantee low interest rates. In fact, credit cards typically have higher interest rates compared to other forms of borrowing.",
+        "incorrect": "Incorrect. Credit cards do not guarantee low interest rates. In fact, credit cards typically have higher interest rates compared to other forms of borrowing."
+      }
+    },
+    {
+      "type": "application",
+      "title": "Responsible Credit Card Use",
+      "content": "Follow these guidelines to use credit cards responsibly:\n\n1. **Pay in Full Each Month**: Avoid interest charges by paying your full balance\n2. **Stay Below 30% Utilization**: Keep your balance below 30% of your credit limit\n3. **Pay on Time**: Never miss a payment due date\n4. **Check Statements Regularly**: Review for errors and unauthorized charges\n5. **Choose the Right Card**: Select a card with features that match your needs\n6. **Limit the Number of Cards**: Only have as many as you can manage responsibly\n7. **Read the Fine Print**: Understand all terms, conditions, and fees\n8. **Don't Chase Rewards**: Don't spend more just to earn rewards\n9. **Create a Budget**: Ensure credit card spending fits within your overall budget"
+    },
+    {
+      "type": "complete",
+      "character": "cash",
+      "text": "Great job completing this lesson on credit cards! You now understand how credit cards work, their benefits and risks, and how to use them responsibly. Remember, credit cards can be powerful financial tools when used wisely, but they can lead to financial problems if misused. In our next lesson, we'll explore different types of loans and how they compare to credit cards."
+    }
+  ]
+}
