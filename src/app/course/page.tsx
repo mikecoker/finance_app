@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Module } from '@/components/modules/ModuleCard';
 import { ProgressProvider } from '@/components/progress/ProgressProvider';
 import { UserProfile } from '@/components/user/UserProfile';
@@ -9,165 +9,63 @@ import { ModuleGrid } from '@/components/modules/ModuleGrid';
 import { ModuleDetail } from '@/components/modules/ModuleDetail';
 import { BankingLessonDemo } from '@/components/lessons/BankingLessonDemo';
 import { CharacterDialog } from '@/components/characters/CharacterDialog';
-
-// Sample data for demonstration
-const sampleModules: Module[] = [
-  {
-    id: 'banking-fundamentals',
-    title: 'Banking Fundamentals',
-    description: 'Learn how banks operate, different account types, and how to choose the right bank for your needs.',
-    character: 'cash',
-    level: 'foundation',
-    lessons: 5,
-    completedLessons: 0,
-    xpReward: 250,
-    prerequisites: [],
-    unlocked: true,
-  },
-  {
-    id: 'budgeting-basics',
-    title: 'Budgeting Basics',
-    description: 'Master the essentials of creating and maintaining a personal budget to achieve your financial goals.',
-    character: 'cash',
-    level: 'foundation',
-    lessons: 4,
-    completedLessons: 0,
-    xpReward: 200,
-    prerequisites: [],
-    unlocked: true,
-  },
-  {
-    id: 'credit-cards-101',
-    title: 'Credit Cards 101',
-    description: 'Understand how credit cards work, their benefits and risks, and how to use them responsibly.',
-    character: 'securio',
-    level: 'foundation',
-    lessons: 6,
-    completedLessons: 0,
-    xpReward: 300,
-    prerequisites: ['banking-fundamentals'],
-    unlocked: true,
-  },
-  {
-    id: 'investing-basics',
-    title: 'Investing Basics',
-    description: 'Learn the fundamentals of investing, different investment vehicles, and how to start building a portfolio.',
-    character: 'investra',
-    level: 'intermediate',
-    lessons: 8,
-    completedLessons: 0,
-    xpReward: 400,
-    prerequisites: ['banking-fundamentals', 'budgeting-basics'],
-    unlocked: false,
-  },
-  {
-    id: 'tax-essentials',
-    title: 'Tax Essentials',
-    description: 'Understand the basics of income tax, deductions, credits, and strategies to optimize your tax situation.',
-    character: 'taxxy',
-    level: 'intermediate',
-    lessons: 7,
-    completedLessons: 0,
-    xpReward: 350,
-    prerequisites: ['banking-fundamentals'],
-    unlocked: false,
-  },
-  {
-    id: 'retirement-planning',
-    title: 'Retirement Planning',
-    description: 'Plan for your future with strategies for retirement savings, accounts, and income planning.',
-    character: 'investra',
-    level: 'advanced',
-    lessons: 6,
-    completedLessons: 0,
-    xpReward: 450,
-    prerequisites: ['investing-basics'],
-    unlocked: false,
-  },
-];
-
-// Sample lessons for Banking Fundamentals module
-const sampleLessons = [
-  {
-    id: 'banking-intro',
-    moduleId: 'banking-fundamentals',
-    title: 'Introduction to Banking',
-    description: 'Learn what banks are and how they function in the economy.',
-    xpReward: 50,
-    completed: false,
-    locked: false,
-    current: true,
-  },
-  {
-    id: 'account-types',
-    moduleId: 'banking-fundamentals',
-    title: 'Types of Bank Accounts',
-    description: 'Explore checking, savings, and other account types.',
-    xpReward: 50,
-    completed: false,
-    locked: false,
-    current: false,
-  },
-  {
-    id: 'banking-fees',
-    moduleId: 'banking-fundamentals',
-    title: 'Understanding Banking Fees',
-    description: 'Learn about common fees and how to avoid them.',
-    xpReward: 50,
-    completed: false,
-    locked: false,
-    current: false,
-  },
-  {
-    id: 'online-banking',
-    moduleId: 'banking-fundamentals',
-    title: 'Online and Mobile Banking',
-    description: 'Master digital banking tools and features.',
-    xpReward: 50,
-    completed: false,
-    locked: false,
-    current: false,
-  },
-  {
-    id: 'banking-security',
-    moduleId: 'banking-fundamentals',
-    title: 'Banking Security',
-    description: 'Protect your accounts and personal information.',
-    xpReward: 50,
-    completed: false,
-    locked: true,
-    current: false,
-  },
-];
+import { 
+  getModules, 
+  getLessonsMetadata, 
+  getLessonContent, 
+  LessonMetadata, 
+  LessonStep,
+  saveLessonProgress,
+  loadLessonProgress
+} from '@/services/dataService';
 
 // Main application component
 export default function CourseApp() {
-  const [view, setView] = React.useState<'modules' | 'module-detail' | 'lesson'>('modules');
-  const [selectedModule, setSelectedModule] = React.useState<string | null>(null);
-  const [selectedLesson, setSelectedLesson] = React.useState<string | null>(null);
-  const [lessons, setLessons] = React.useState(sampleLessons);
+  const [view, setView] = useState<'modules' | 'module-detail' | 'lesson'>('modules');
+  const [selectedModule, setSelectedModule] = useState<string | null>(null);
+  const [selectedLesson, setSelectedLesson] = useState<string | null>(null);
+  const [modules, setModules] = useState<Module[]>([]);
+  const [lessons, setLessons] = useState<LessonMetadata[]>([]);
+  const [currentLessonContent, setCurrentLessonContent] = useState<LessonStep[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   
-  // Load saved progress from localStorage on component mount
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedProgress = localStorage.getItem('lessonProgress');
+  // Load data on component mount
+  useEffect(() => {
+    async function loadData() {
+      setIsLoading(true);
+      
+      // Load modules
+      const modulesData = await getModules();
+      setModules(modulesData);
+      
+      // Load lessons metadata
+      const lessonsData = await getLessonsMetadata();
+      
+      // Check for saved progress
+      const savedProgress = loadLessonProgress();
       if (savedProgress) {
-        try {
-          const parsedProgress = JSON.parse(savedProgress);
-          setLessons(parsedProgress);
-        } catch (e) {
-          console.error('Error parsing saved progress:', e);
-        }
+        setLessons(savedProgress);
+      } else {
+        setLessons(lessonsData);
       }
+      
+      setIsLoading(false);
     }
+    
+    loadData();
   }, []);
   
-  // Save progress to localStorage whenever lessons state changes
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('lessonProgress', JSON.stringify(lessons));
+  // Load lesson content when a lesson is selected
+  useEffect(() => {
+    async function loadLessonContent() {
+      if (selectedLesson) {
+        const content = await getLessonContent(selectedLesson);
+        setCurrentLessonContent(content);
+      }
     }
-  }, [lessons]);
+    
+    loadLessonContent();
+  }, [selectedLesson]);
   
   const handleModuleSelect = (moduleId: string) => {
     setSelectedModule(moduleId);
@@ -209,6 +107,7 @@ export default function CourseApp() {
         
         // Update lessons state to trigger localStorage save
         setLessons(updatedLessons);
+        saveLessonProgress(updatedLessons);
       } else {
         // If this was the last lesson, go back to module view
         handleBackToModule();
@@ -226,6 +125,17 @@ export default function CourseApp() {
     setView('module-detail');
     setSelectedLesson(null);
   };
+  
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-xl">Loading course content...</p>
+        </div>
+      </div>
+    );
+  }
   
   return (
     <ProgressProvider>
@@ -245,14 +155,14 @@ export default function CourseApp() {
             <div className="lg:col-span-3">
               {view === 'modules' && (
                 <ModuleGrid 
-                  modules={sampleModules}
+                  modules={modules}
                   onModuleSelect={handleModuleSelect}
                 />
               )}
               
               {view === 'module-detail' && selectedModule && (
                 <ModuleDetail
-                  module={sampleModules.find(m => m.id === selectedModule)!}
+                  module={modules.find(m => m.id === selectedModule)!}
                   lessons={lessons.filter(l => l.moduleId === selectedModule)}
                   onLessonSelect={handleLessonSelect}
                   onBackClick={handleBackToModules}
@@ -272,14 +182,14 @@ export default function CourseApp() {
                   </button>
                   
                   {/* Display different content based on the selected lesson */}
-                  {selectedLesson === 'banking-intro' && (
+                  {selectedLesson === 'banking-intro' && currentLessonContent.length > 0 && (
                     <BankingLessonDemo 
                       onBackToModule={handleBackToModule} 
                       onNextLesson={handleNextLesson}
                     />
                   )}
                   
-                  {selectedLesson === 'account-types' && (
+                  {selectedLesson === 'account-types' && currentLessonContent.length > 0 && (
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h2 className="text-2xl font-bold mb-4">Types of Bank Accounts</h2>
                       <div className="mb-6">
@@ -352,12 +262,12 @@ export default function CourseApp() {
                   {selectedLesson !== 'banking-intro' && selectedLesson !== 'account-types' && (
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h2 className="text-2xl font-bold mb-4">
-                        {sampleLessons.find(l => l.id === selectedLesson)?.title || 'Lesson'}
+                        {lessons.find(l => l.id === selectedLesson)?.title || 'Lesson'}
                       </h2>
                       <div className="mb-6">
                         <CharacterDialog
                           character="cash"
-                          message={`This lesson on ${sampleLessons.find(l => l.id === selectedLesson)?.title || 'this topic'} is under development. Check back soon!`}
+                          message={`This lesson on ${lessons.find(l => l.id === selectedLesson)?.title || 'this topic'} is under development. Check back soon!`}
                           autoClose={false}
                         />
                       </div>

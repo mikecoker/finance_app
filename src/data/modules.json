@@ -1,0 +1,74 @@
+[
+  {
+    "id": "banking-fundamentals",
+    "title": "Banking Fundamentals",
+    "description": "Learn how banks operate, different account types, and how to choose the right bank for your needs.",
+    "character": "cash",
+    "level": "foundation",
+    "lessons": 5,
+    "completedLessons": 0,
+    "xpReward": 250,
+    "prerequisites": [],
+    "unlocked": true
+  },
+  {
+    "id": "budgeting-basics",
+    "title": "Budgeting Basics",
+    "description": "Master the essentials of creating and maintaining a personal budget to achieve your financial goals.",
+    "character": "cash",
+    "level": "foundation",
+    "lessons": 4,
+    "completedLessons": 0,
+    "xpReward": 200,
+    "prerequisites": [],
+    "unlocked": true
+  },
+  {
+    "id": "credit-cards-101",
+    "title": "Credit Cards 101",
+    "description": "Understand how credit cards work, their benefits and risks, and how to use them responsibly.",
+    "character": "securio",
+    "level": "foundation",
+    "lessons": 6,
+    "completedLessons": 0,
+    "xpReward": 300,
+    "prerequisites": ["banking-fundamentals"],
+    "unlocked": true
+  },
+  {
+    "id": "investing-basics",
+    "title": "Investing Basics",
+    "description": "Learn the fundamentals of investing, different investment vehicles, and how to start building a portfolio.",
+    "character": "investra",
+    "level": "intermediate",
+    "lessons": 8,
+    "completedLessons": 0,
+    "xpReward": 400,
+    "prerequisites": ["banking-fundamentals", "budgeting-basics"],
+    "unlocked": false
+  },
+  {
+    "id": "tax-essentials",
+    "title": "Tax Essentials",
+    "description": "Understand the basics of income tax, deductions, credits, and strategies to optimize your tax situation.",
+    "character": "taxxy",
+    "level": "intermediate",
+    "lessons": 7,
+    "completedLessons": 0,
+    "xpReward": 350,
+    "prerequisites": ["banking-fundamentals"],
+    "unlocked": false
+  },
+  {
+    "id": "retirement-planning",
+    "title": "Retirement Planning",
+    "description": "Plan for your future with strategies for retirement savings, accounts, and income planning.",
+    "character": "investra",
+    "level": "advanced",
+    "lessons": 6,
+    "completedLessons": 0,
+    "xpReward": 450,
+    "prerequisites": ["investing-basics"],
+    "unlocked": false
+  }
+]

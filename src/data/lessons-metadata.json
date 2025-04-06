@@ -1,0 +1,52 @@
+[
+  {
+    "id": "banking-intro",
+    "moduleId": "banking-fundamentals",
+    "title": "Introduction to Banking",
+    "description": "Learn what banks are and how they function in the economy.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": true
+  },
+  {
+    "id": "account-types",
+    "moduleId": "banking-fundamentals",
+    "title": "Types of Bank Accounts",
+    "description": "Explore checking, savings, and other account types.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "banking-fees",
+    "moduleId": "banking-fundamentals",
+    "title": "Understanding Banking Fees",
+    "description": "Learn about common fees and how to avoid them.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "online-banking",
+    "moduleId": "banking-fundamentals",
+    "title": "Online and Mobile Banking",
+    "description": "Master digital banking tools and features.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": false,
+    "current": false
+  },
+  {
+    "id": "banking-security",
+    "moduleId": "banking-fundamentals",
+    "title": "Banking Security",
+    "description": "Protect your accounts and personal information.",
+    "xpReward": 50,
+    "completed": false,
+    "locked": true,
+    "current": false
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "type": "intro",
+    "character": "cash",
+    "title": "Types of Bank Accounts",
+    "content": "Welcome to our lesson on Types of Bank Accounts! Now that you understand how banks work, let's explore the different types of accounts banks offer. Each account type serves different purposes and comes with its own features."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Checking Accounts",
+    "content": "Checking accounts are designed for everyday transactions like purchases and bill payments. They typically offer unlimited transactions but little to no interest. Features include easy access via debit cards, checks, and online transfers. Some banks charge monthly maintenance fees, while others offer free checking with minimum balance or direct deposit."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Savings Accounts",
+    "content": "Savings accounts are designed to help you save money and earn interest. They have some limitations on withdrawals, typically limited to 6 per month due to federal regulations. They earn higher interest than checking accounts and are good for emergency funds and short-term savings goals."
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Money Market Accounts",
+    "content": "Money market accounts are a hybrid between checking and savings accounts, offering higher interest rates with some check-writing privileges. They typically require higher minimum balances and have limited transactions similar to savings accounts."
+  },
+  {
+    "type": "quiz",
+    "character": "cash",
+    "title": "Quick Check",
+    "content": "Which account type typically offers the highest interest rate?",
+    "options": [
+      {
+        "text": "Checking account",
+        "correct": false,
+        "feedback": "Checking accounts typically offer little to no interest as they're designed for frequent transactions."
+      },
+      {
+        "text": "Savings account",
+        "correct": false,
+        "feedback": "While savings accounts do offer interest, there are other account types with higher rates."
+      },
+      {
+        "text": "Certificate of Deposit (CD)",
+        "correct": true,
+        "feedback": "Correct! CDs typically offer higher interest rates in exchange for keeping your money deposited for a fixed term."
+      },
+      {
+        "text": "Debit card account",
+        "correct": false,
+        "feedback": "A debit card is a feature of an account, not an account type itself."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "cash",
+    "title": "Certificates of Deposit (CDs)",
+    "content": "Certificates of Deposit are time deposits that require you to keep your money in the account for a specific term to earn the full interest. Terms range from 3 months to 5+ years, with higher interest rates than savings accounts. Early withdrawal penalties apply if you take your money out before the term ends."
+  },
+  {
+    "type": "interactive",
+    "character": "cash",
+    "title": "Account Selection Simulation",
+    "content": "Let's explore which account might be right for different financial goals. Consider factors like access needs, interest rates, and minimum balance requirements."
+  },
+  {
+    "type": "application",
+    "character": "cash",
+    "title": "Real-World Application",
+    "content": "Think about your own financial situation. Which account types would best serve your needs? Many people benefit from having multiple account types - perhaps a checking account for daily expenses, a savings account for emergencies, and a CD for longer-term goals."
+  },
+  {
+    "type": "complete",
+    "character": "cash",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the lesson on bank account types. You now understand the different options available and their key features. In the next lesson, we'll explore banking fees and how to avoid them."
+  }
+]
