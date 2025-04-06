@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "investra",
+    "title": "Retirement Income Planning",
+    "content": "Welcome to our fourth lesson in Retirement Planning! I'm Investra, and today we'll explore how to convert your retirement savings into a sustainable income stream. Creating a reliable income plan is crucial for maintaining your lifestyle throughout retirement."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "The Retirement Income Challenge",
+    "content": "Retirement income planning differs fundamentally from accumulation planning. Instead of focusing on growth and contributions, you're now concerned with generating reliable income while preserving capital. Key challenges include: Longevity risk (outliving your money), inflation risk (declining purchasing power), sequence of returns risk (market downturns early in retirement), healthcare costs, and unexpected expenses. A comprehensive income plan addresses these challenges through diversified income sources and appropriate withdrawal strategies."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Social Security Optimization",
+    "content": "Social Security provides an inflation-adjusted lifetime income stream that should be a cornerstone of your retirement plan. Benefits can start as early as age 62, but are reduced by up to 30% compared to your full retirement age (66-67 for most people today). Delaying benefits until age 70 increases them by 8% per year beyond full retirement age. For married couples, coordinating claiming strategies can maximize lifetime benefits. Consider factors like health, family longevity, other income sources, and cash needs when deciding when to claim."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Withdrawal Strategies",
+    "content": "Several withdrawal strategies can help make your savings last: The 4% Rule suggests withdrawing 4% of your initial balance in year one, then adjusting that amount for inflation annually; The Fixed-Dollar approach withdraws a specific dollar amount regularly; The Fixed-Percentage method takes a set percentage of your current balance each year; The Bucket Strategy divides assets into short-term (cash), medium-term (bonds), and long-term (stocks) buckets based on when you'll need the money. Each approach has pros and cons regarding simplicity, flexibility, and sustainability."
+  },
+  {
+    "type": "quiz",
+    "character": "investra",
+    "title": "Quick Check",
+    "content": "What happens to your Social Security benefit if you delay claiming from your full retirement age (66-67) until age 70?",
+    "options": [
+      {
+        "text": "It decreases by 5% per year",
+        "correct": false,
+        "feedback": "Social Security benefits do not decrease when you delay claiming beyond full retirement age."
+      },
+      {
+        "text": "It stays the same, but you receive a lump sum for the delay",
+        "correct": false,
+        "feedback": "There is no lump sum payment for delaying benefits (except in very specific circumstances). Instead, your monthly benefit increases."
+      },
+      {
+        "text": "It increases by approximately 8% per year",
+        "correct": true,
+        "feedback": "Correct! Delaying Social Security beyond your full retirement age increases your benefit by approximately 8% per year until age 70, providing a significantly larger lifetime income stream."
+      },
+      {
+        "text": "It increases by 3% per year",
+        "correct": false,
+        "feedback": "The increase for delaying Social Security beyond full retirement age is approximately 8% per year, not 3%."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Guaranteed Income Sources",
+    "content": "Guaranteed income sources can provide stability in your retirement plan. Beyond Social Security, consider: Pensions (declining in availability but valuable if you have one); Annuities (insurance products that convert a lump sum into lifetime income); and Qualified Longevity Annuity Contracts (QLACs, which provide income starting later in retirement). Many financial advisors recommend covering essential expenses with guaranteed income sources, then using investment withdrawals for discretionary spending. This approach provides peace of mind while maintaining flexibility."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Tax-Efficient Withdrawals",
+    "content": "The order in which you withdraw from different account types can significantly impact your tax liability and the longevity of your savings. A common strategy is to withdraw from taxable accounts first (taking advantage of lower capital gains rates), then tax-deferred accounts like Traditional 401(k)s and IRAs, and finally tax-free accounts like Roth IRAs. However, this general approach should be customized based on your specific situation, potentially including partial Roth conversions in lower-income years to reduce future RMDs and tax burden."
+  },
+  {
+    "type": "interactive",
+    "character": "investra",
+    "title": "Retirement Income Planner",
+    "content": "Let's create a retirement income plan based on your expected savings, Social Security benefits, and other income sources. We'll explore different withdrawal strategies and their potential sustainability, helping you visualize how your income might flow throughout retirement."
+  },
+  {
+    "type": "application",
+    "character": "investra",
+    "title": "Real-World Application",
+    "content": "Create a preliminary retirement budget, separating essential expenses (housing, food, healthcare, utilities) from discretionary ones (travel, entertainment, gifts). Then, estimate your expected Social Security benefit using the calculator on the SSA.gov website. Compare your essential expenses to your expected Social Security income to determine your 'income gap' that will need to be filled by other sources. This exercise will help you understand how much additional guaranteed or investment income you might need in retirement."
+  },
+  {
+    "type": "complete",
+    "character": "investra",
+    "title": "Lesson Complete!",
+    "content": "Excellent work! You've completed the lesson on retirement income planning. You now understand the retirement income challenge, Social Security optimization, various withdrawal strategies, guaranteed income sources, and tax-efficient withdrawal approaches. In the next lesson, we'll explore healthcare in retirement, including Medicare, long-term care, and health savings strategies."
+  }
+]

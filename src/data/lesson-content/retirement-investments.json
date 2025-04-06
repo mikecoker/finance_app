@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "investra",
+    "title": "Retirement Investment Strategies",
+    "content": "Welcome to our third lesson in Retirement Planning! I'm Investra, and today we'll explore investment strategies specifically for retirement. Making informed investment decisions is crucial for growing your retirement savings to meet your future needs."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Asset Allocation Fundamentals",
+    "content": "Asset allocation—how you divide your investments among stocks, bonds, and cash—is one of the most important factors in your long-term returns. Stocks generally offer higher growth potential but with more volatility, while bonds typically provide more stability but lower returns. Your ideal allocation depends on your time horizon, risk tolerance, and financial goals. A common starting point is the '100 minus age' rule: subtract your age from 100 to get your approximate stock percentage, though many financial advisors now suggest '110 or 120 minus age' given longer lifespans."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Diversification Strategies",
+    "content": "Diversification—spreading investments across various asset classes and within those classes—helps reduce risk without sacrificing potential returns. Beyond the basic stock/bond allocation, consider diversifying across: Company sizes (large, mid, small-cap); Geographic regions (domestic, international, emerging markets); Investment styles (growth, value); Sectors (technology, healthcare, finance, etc.); and Bond types (government, corporate, municipal). ETFs and mutual funds can provide instant diversification across many securities with a single investment."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Target-Date Funds",
+    "content": "Target-date funds offer a simple 'set it and forget it' approach to retirement investing. You select a fund with a date close to your planned retirement year, and the fund automatically adjusts its asset allocation over time, becoming more conservative as the target date approaches. These funds provide professional management and automatic rebalancing, making them ideal for investors who prefer a hands-off approach. However, they may have higher fees than building your own portfolio and might not perfectly match your specific risk tolerance."
+  },
+  {
+    "type": "quiz",
+    "character": "investra",
+    "title": "Quick Check",
+    "content": "Which of the following best describes the purpose of asset allocation in retirement investing?",
+    "options": [
+      {
+        "text": "To maximize returns regardless of risk",
+        "correct": false,
+        "feedback": "Maximizing returns without considering risk could lead to an overly aggressive portfolio that might suffer significant losses at inopportune times."
+      },
+      {
+        "text": "To balance risk and return based on your time horizon and goals",
+        "correct": true,
+        "feedback": "Correct! Asset allocation aims to create a portfolio that balances potential returns with an appropriate level of risk based on your specific situation and goals."
+      },
+      {
+        "text": "To eliminate all investment risk",
+        "correct": false,
+        "feedback": "Eliminating all risk would mean avoiding growth investments like stocks, which are typically necessary for long-term retirement success. Some risk is usually necessary."
+      },
+      {
+        "text": "To match the performance of the S&P 500 index",
+        "correct": false,
+        "feedback": "While the S&P 500 is an important benchmark, proper asset allocation is personalized to your situation and often includes investments beyond large U.S. stocks."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Adjusting Strategy Over Time",
+    "content": "Your retirement investment strategy should evolve as you age. In early career (20s-30s), emphasize growth with a higher allocation to stocks. In mid-career (40s-50s), gradually increase bond allocation while maintaining significant stock exposure. In pre-retirement (5-10 years before retirement), further reduce risk while ensuring sufficient growth to combat inflation. In retirement, consider a 'bucket strategy' with cash for near-term expenses, moderate-risk investments for mid-term needs, and growth investments for long-term expenses. Regular portfolio reviews and rebalancing are essential throughout."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Managing Investment Costs",
+    "content": "Investment costs can significantly impact your retirement savings over time. A 1% difference in annual fees can reduce your final balance by 20% or more over 30 years. Focus on expense ratios for funds and ETFs (lower is better, with many excellent options under 0.20%); trading commissions (many brokerages now offer commission-free trading); account maintenance fees; and advisor fees if applicable. Index funds and ETFs typically have lower costs than actively managed funds and often perform better over long periods."
+  },
+  {
+    "type": "interactive",
+    "character": "investra",
+    "title": "Portfolio Builder",
+    "content": "Let's build a retirement portfolio based on your age, risk tolerance, and retirement timeline. We'll recommend an appropriate asset allocation and specific investment types to consider, along with an estimate of potential growth over time."
+  },
+  {
+    "type": "application",
+    "character": "investra",
+    "title": "Real-World Application",
+    "content": "Review your current retirement investment portfolio. Check your asset allocation—is it appropriate for your age and risk tolerance? Look at the expense ratios of your investments—could you reduce costs with similar but less expensive options? If you haven't rebalanced your portfolio in the past year, consider doing so to maintain your target allocation. If you're overwhelmed, consider whether a target-date fund might simplify your approach while maintaining a solid investment strategy."
+  },
+  {
+    "type": "complete",
+    "character": "investra",
+    "title": "Lesson Complete!",
+    "content": "Great job! You've completed the lesson on retirement investment strategies. You now understand asset allocation fundamentals, diversification strategies, target-date funds, how to adjust your strategy over time, and the importance of managing investment costs. In the next lesson, we'll explore retirement income planning to help you prepare for converting your savings into income during retirement."
+  }
+]

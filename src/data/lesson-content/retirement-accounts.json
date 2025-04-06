@@ -1,0 +1,84 @@
+[
+  {
+    "type": "intro",
+    "character": "investra",
+    "title": "Retirement Accounts",
+    "content": "Welcome to our second lesson in Retirement Planning! I'm Investra, and today we'll explore the various retirement accounts available to help you save for your future. Understanding these accounts is crucial for maximizing tax advantages and building your retirement nest egg."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Employer-Sponsored Plans: 401(k), 403(b), and 457",
+    "content": "Employer-sponsored retirement plans are powerful savings vehicles. The 401(k) is offered by private companies, the 403(b) by non-profit organizations, and the 457 by government employers. These plans allow you to contribute pre-tax dollars (reducing your current taxable income) or after-tax dollars (Roth option). For 2023, you can contribute up to $22,500, plus an additional $7,500 if you're 50 or older. Many employers offer matching contributions—essentially free money that you should always try to capture."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Individual Retirement Accounts (IRAs)",
+    "content": "IRAs are retirement accounts you open independently of your employer. Traditional IRAs offer tax-deductible contributions (subject to income limits if you have a workplace plan) and tax-deferred growth, with taxes paid upon withdrawal. Roth IRAs are funded with after-tax dollars but offer tax-free growth and qualified withdrawals. For 2023, you can contribute up to $6,500 to IRAs, plus an additional $1,000 if you're 50 or older. Roth IRAs have income eligibility limits, but 'backdoor' Roth conversions may be an option for high earners."
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Self-Employed Retirement Options",
+    "content": "Self-employed individuals have several retirement plan options: SEP IRAs allow contributions of up to 25% of net self-employment income (maximum $66,000 for 2023); Solo 401(k)s allow contributions as both employer and employee (potentially allowing higher contributions than SEP IRAs); and SIMPLE IRAs are designed for small businesses with fewer than 100 employees. Each has different contribution limits, administrative requirements, and features, so choosing the right one depends on your specific situation."
+  },
+  {
+    "type": "quiz",
+    "character": "investra",
+    "title": "Quick Check",
+    "content": "Which retirement account option allows for tax-free withdrawals in retirement if certain conditions are met?",
+    "options": [
+      {
+        "text": "Traditional 401(k)",
+        "correct": false,
+        "feedback": "Traditional 401(k) withdrawals are taxed as ordinary income in retirement."
+      },
+      {
+        "text": "Traditional IRA",
+        "correct": false,
+        "feedback": "Traditional IRA withdrawals are taxed as ordinary income in retirement."
+      },
+      {
+        "text": "Roth 401(k) or Roth IRA",
+        "correct": true,
+        "feedback": "Correct! Roth accounts are funded with after-tax dollars, allowing qualified withdrawals to be completely tax-free in retirement."
+      },
+      {
+        "text": "SEP IRA",
+        "correct": false,
+        "feedback": "SEP IRA withdrawals are taxed as ordinary income in retirement, similar to Traditional IRAs."
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Traditional vs. Roth: Making the Choice",
+    "content": "The Traditional vs. Roth decision depends largely on your current tax situation and expectations for retirement. Choose Traditional accounts if you believe you're in a higher tax bracket now than you will be in retirement, as you'll benefit from immediate tax deductions and pay taxes later at potentially lower rates. Choose Roth accounts if you believe you're in a lower tax bracket now than you will be in retirement, or if you value the flexibility of tax-free withdrawals. Many financial advisors recommend having both types for 'tax diversification.'"
+  },
+  {
+    "type": "content",
+    "character": "investra",
+    "title": "Account Rules and Restrictions",
+    "content": "Retirement accounts have important rules to understand: Early withdrawal penalties (typically 10% plus taxes) apply before age 59½, with certain exceptions; Required Minimum Distributions (RMDs) mandate withdrawals beginning at age 73 for most accounts (Roth IRAs are exempt); Contribution deadlines differ (employer plans by December 31, IRAs by tax filing deadline); and Loan provisions vary by plan type. Understanding these rules helps you avoid penalties and maximize the benefits of your retirement accounts."
+  },
+  {
+    "type": "interactive",
+    "character": "investra",
+    "title": "Account Comparison Tool",
+    "content": "Let's compare different retirement accounts based on your specific situation. We'll look at contribution limits, tax benefits, withdrawal rules, and potential growth to help you determine which accounts might be most beneficial for your retirement strategy."
+  },
+  {
+    "type": "application",
+    "character": "investra",
+    "title": "Real-World Application",
+    "content": "Review your current retirement accounts and contribution levels. Are you maximizing employer matches? Could you increase your contributions? If you have old 401(k)s from previous employers, consider consolidating them through rollovers to simplify management. If you don't have an IRA yet, research providers and consider opening one to complement your employer plan. Set a goal to increase your retirement contributions by at least 1% of your income this year."
+  },
+  {
+    "type": "complete",
+    "character": "investra",
+    "title": "Lesson Complete!",
+    "content": "Excellent work! You've completed the lesson on retirement accounts. You now understand the various types of employer-sponsored plans and IRAs, options for self-employed individuals, the Traditional vs. Roth decision, and important account rules and restrictions. In the next lesson, we'll explore retirement investment strategies to help you grow your savings effectively."
+  }
+]
