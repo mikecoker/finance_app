@@ -130,10 +130,11 @@ export const StepByStepLesson: React.FC<StepByStepLessonProps> = ({
       case 'content':
         return (
           <div className="mb-6" key={`content-${currentStep}`}>
-            <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-              <p>{step.content}</p>
-            </div>
+            <CharacterDialog
+              character={step.character as any}
+              message={step.content}
+              autoClose={false}
+            />
             <button
               className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
               onClick={handleNextStep}
