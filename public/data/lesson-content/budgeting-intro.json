@@ -66,8 +66,20 @@
   {
     "type": "interactive",
     "character": "cash",
-    "title": "Budget Calculator",
-    "content": "Let's create a simple monthly budget together. We'll input your income sources and estimate your expenses across different categories to see how your money could be allocated effectively."
+    "title": "Budgeting Challenge",
+    "content": "Let's try to balance a monthly budget with some realistic expenses. Adjust the spending in each category to make sure you have enough for savings!",
+    "interactiveConfig": {
+      "initialIncome": 3500,
+      "initialCategories": {
+        "housing": 1000,
+        "food": 200,
+        "transportation": 200,
+        "utilities": 200,
+        "entertainment": 200,
+        "miscellaneous": 200,
+        "savings": 100
+      }
+    }
   },
   {
     "type": "application",

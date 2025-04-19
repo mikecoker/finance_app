@@ -11,6 +11,7 @@ import {
 } from '@/components/characters';
 import { LessonStep } from '@/services/dataService';
 import { useProgress } from '@/components/progress/ProgressProvider';
+import BudgetSimulator from './interactive/BudgetSimulator';
 
 interface StepByStepLessonProps {
   lessonContent: LessonStep[];
@@ -192,21 +193,31 @@ export const StepByStepLesson: React.FC<StepByStepLessonProps> = ({
         );
         
       case 'interactive':
-        return (
-          <div className="mb-6" key={`interactive-${currentStep}`}>
-            <div className={`border rounded-lg p-4 border-purple-200 bg-purple-50`}>
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-              <p>{step.content}</p>
+        // Render specific interactive components based on lessonId
+        if (lessonId === 'budgeting-intro') { // Example: Check for a specific budgeting lesson ID
+          return (
+            <div className="mb-6" key={`interactive-${currentStep}`}>
+              <BudgetSimulator onComplete={handleNextStep} config={step.interactiveConfig} />
             </div>
-            <button
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
-              onClick={handleNextStep}
-            >
-              Continue
-            </button>
-          </div>
-        );
-        
+          );
+        } else {
+          // Default rendering for other interactive types
+          return (
+            <div className="mb-6" key={`interactive-${currentStep}`}>
+              <div className={`border rounded-lg p-4 border-purple-200 bg-purple-50`}>
+                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <p>{step.content}</p>
+              </div>
+              <button
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 mx-auto block"
+                onClick={handleNextStep}
+              >
+                Continue
+              </button>
+            </div>
+          );
+        }
+
       case 'application':
         return (
           <div className="mb-6" key={`application-${currentStep}`}>
