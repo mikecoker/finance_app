@@ -12,6 +12,7 @@ import {
 import { LessonStep } from '@/services/dataService';
 import { useProgress } from '@/components/progress/ProgressProvider';
 import BudgetSimulator from './interactive/BudgetSimulator';
+import ExpenseTracker from './interactive/ExpenseTracker';
 
 interface StepByStepLessonProps {
   lessonContent: LessonStep[];
@@ -194,13 +195,20 @@ export const StepByStepLesson: React.FC<StepByStepLessonProps> = ({
         
       case 'interactive':
         // Render specific interactive components based on lessonId
-        if (lessonId === 'budgeting-intro') { // Example: Check for a specific budgeting lesson ID
+        if (lessonId === 'budgeting-intro') {
           return (
             <div className="mb-6" key={`interactive-${currentStep}`}>
               <BudgetSimulator onComplete={handleNextStep} config={step.interactiveConfig} />
             </div>
           );
-        } else {
+        } else if (lessonId === 'expense-tracking') {
+           return (
+            <div className="mb-6" key={`interactive-${currentStep}`}>
+              <ExpenseTracker onComplete={handleNextStep} config={step.interactiveConfig} />
+            </div>
+          );
+        }
+         else {
           // Default rendering for other interactive types
           return (
             <div className="mb-6" key={`interactive-${currentStep}`}>

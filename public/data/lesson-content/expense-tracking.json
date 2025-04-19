@@ -66,8 +66,38 @@
   {
     "type": "interactive",
     "character": "cash",
-    "title": "Expense Tracker",
-    "content": "Let's practice categorizing expenses and analyzing spending patterns. We'll review a sample month of transactions and identify areas of potential savings and budget adjustments."
+    "title": "Track and Categorize Expenses",
+    "content": "Use the expense tracker below to add and categorize a few sample expenses. See if you can identify any spending patterns!",
+    "interactiveConfig": {
+      "initialExpenses": [
+        {
+          "id": 1,
+          "description": "Groceries",
+          "amount": 150,
+          "category": "Food"
+        },
+        {
+          "id": 2,
+          "description": "Bus fare",
+          "amount": 2.5,
+          "category": "Transportation"
+        },
+        {
+          "id": 3,
+          "description": "Movie tickets",
+          "amount": 25,
+          "category": "Entertainment"
+        },
+        { "id": 4, "description": "Coffee", "amount": 5, "category": "Food" }
+      ],
+      "availableCategories": [
+        "Food",
+        "Transportation",
+        "Entertainment",
+        "Utilities",
+        "Other"
+      ]
+    }
   },
   {
     "type": "application",
